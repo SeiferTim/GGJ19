@@ -7,7 +7,7 @@ extends Sprite
 var game_over = false
 var level_win = false
 
-var next_scene = "res://Scene03.tscn"
+var next_scene = "res://Basement_Level.tscn"
 
 func _ready():
 	# Called when the node is added to the scene for the first time.

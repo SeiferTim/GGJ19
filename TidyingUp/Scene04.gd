@@ -7,12 +7,12 @@ extends Sprite
 var game_over = false
 var level_win = false
 
-var next_scene = "res://Scene2/Bathroom_Level.tscn"
+var next_scene = "res://Dog_Level.tscn"
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
-	
+
 	pass
 
 #func _process(delta):

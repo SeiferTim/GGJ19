@@ -22,27 +22,27 @@
 [ext_resource path="res://SuccessLabel.gd" type="Script" id=20]
 [ext_resource path="res://Next_Trigger.gd" type="Script" id=21]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 12.7193, 10 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10.7714, 10 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
 
 [sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[sub_resource type="RectangleShape2D" id=5]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=5]
 
 size = 48
 use_mipmaps = false
@@ -76,7 +76,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 custom_solver_bias = 0.0
 extents = Vector2( 16.1798, 10 )
 
-[node name="Scene02" type="Sprite" index="0"]
+[node name="Bathroom_Level" type="Sprite" index="0"]
 
 texture = ExtResource( 1 )
 centered = false
@@ -110,7 +110,7 @@ texture = ExtResource( 5 )
 
 position = Vector2( 8.13005, 43.0067 )
 scale = Vector2( 4.31848, 5.23677 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="MirrorTrigger" type="Area2D" parent="." index="1"]
 
@@ -141,7 +141,7 @@ texture = ExtResource( 8 )
 
 position = Vector2( 9.74714, 44.9967 )
 scale = Vector2( 5.93283, 6.82518 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="ToiletTrigger" type="Area2D" parent="." index="2"]
 
@@ -173,7 +173,7 @@ texture = ExtResource( 11 )
 
 position = Vector2( 33.3747, 41.4476 )
 scale = Vector2( 7.09819, 8.38877 )
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="PlungerTrigger" type="Area2D" parent="." index="3"]
 
@@ -196,7 +196,7 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( 1.92689, -0.631119 )
 scale = Vector2( 1.52433, 4.18355 )
-shape = SubResource( 5 )
+shape = SubResource( 4 )
 
 [node name="plunger" type="Sprite" parent="PlungerTrigger" index="1"]
 
@@ -219,7 +219,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Level 2"
@@ -244,7 +244,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Does it spark disgust?"

@@ -42,7 +42,7 @@ extents = Vector2( 8.74519, 10.5 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[sub_resource type="DynamicFont" id=8]
+[sub_resource type="DynamicFont" id=5]
 
 size = 112
 use_mipmaps = false
@@ -50,12 +50,12 @@ use_filter = false
 font_data = ExtResource( 16 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
 extents = Vector2( 16.1798, 10 )
 
-[node name="Scene01" type="Sprite"]
+[node name="Trash_Level" type="Sprite" index="0"]
 
 texture = ExtResource( 1 )
 centered = false
@@ -227,7 +227,33 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Rect", "Size Flags", "Theme", "custom_colors", "custom_fonts", "custom_styles" ]
 
-[node name="SuccessLabel" type="Label" parent="." index="10"]
+[node name="TidyText" type="Label" parent="." index="10"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 300.0
+margin_top = 540.0
+margin_right = 733.0
+margin_bottom = 598.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 15 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Does it spark filth?"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Rect", "Size Flags", "Theme", "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="SuccessLabel" type="Label" parent="." index="11"]
 
 visible = false
 anchor_left = 0.0
@@ -244,7 +270,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Feel the Joy!"
@@ -297,35 +323,9 @@ _sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts", "cus
 
 position = Vector2( 10, -10 )
 scale = Vector2( 5.5625, 2.42308 )
-shape = SubResource( 9 )
+shape = SubResource( 6 )
 
-[node name="TidyText" type="Label" parent="SuccessLabel" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 90.0
-margin_top = 360.0
-margin_right = 523.0
-margin_bottom = 418.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = ExtResource( 15 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "Does it spark filth?"
-align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Rect", "Size Flags", "Theme", "custom_colors", "custom_fonts", "custom_styles" ]
-
-[node name="GameOverGirl" type="Sprite" parent="." index="11"]
+[node name="GameOverGirl" type="Sprite" parent="." index="12"]
 
 visible = false
 texture = ExtResource( 19 )
@@ -375,7 +375,7 @@ _sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts", "cus
 
 position = Vector2( 10, -10 )
 scale = Vector2( 5.5625, 2.42308 )
-shape = SubResource( 9 )
+shape = SubResource( 6 )
 
 [node name="GameOverLabel" type="Label" parent="GameOverGirl" index="1"]
 
@@ -393,7 +393,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Game Over!"

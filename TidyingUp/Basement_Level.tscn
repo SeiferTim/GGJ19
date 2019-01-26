@@ -1,0 +1,436 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://Interior.png" type="Texture" id=1]
+[ext_resource path="res://Scene03.gd" type="Script" id=2]
+[ext_resource path="res://images/stairs.png" type="Texture" id=3]
+[ext_resource path="res://Web_Trigger.gd" type="Script" id=4]
+[ext_resource path="res://images/web.png" type="Texture" id=5]
+[ext_resource path="res://Junk_Trigger.gd" type="Script" id=6]
+[ext_resource path="res://images/junk box.png" type="Texture" id=7]
+[ext_resource path="res://images/DoorOpen.png" type="Texture" id=8]
+[ext_resource path="res://Door_Trigger.gd" type="Script" id=9]
+[ext_resource path="res://DoorClosed.png" type="Texture" id=10]
+[ext_resource path="res://images/dasd-removebg.png" type="Texture" id=11]
+[ext_resource path="res://Cactus Reguar DFont.tres" type="DynamicFont" id=12]
+[ext_resource path="res://Cactus Regular.tres" type="DynamicFontData" id=13]
+[ext_resource path="res://SuccessLabel.gd" type="Script" id=14]
+[ext_resource path="res://Next_Trigger.gd" type="Script" id=15]
+[ext_resource path="res://images/GameOverGirl.png" type="Texture" id=16]
+[ext_resource path="res://GameOverGirl.gd" type="Script" id=17]
+[ext_resource path="res://Retry_Trigger.gd" type="Script" id=18]
+
+[sub_resource type="CircleShape2D" id=7]
+
+custom_solver_bias = 0.0
+radius = 10.0
+
+[sub_resource type="RectangleShape2D" id=8]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=9]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="DynamicFont" id=5]
+
+size = 112
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 13 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="RectangleShape2D" id=6]
+
+custom_solver_bias = 0.0
+extents = Vector2( 16.1798, 10 )
+
+[node name="Basement_Level" type="Sprite" index="0"]
+
+texture = ExtResource( 1 )
+centered = false
+script = ExtResource( 2 )
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+
+[node name="stairs" type="Sprite" parent="." index="0"]
+
+position = Vector2( 220, 420 )
+texture = ExtResource( 3 )
+
+[node name="Web_Trigger" type="Area2D" parent="." index="1"]
+
+position = Vector2( 960, 70 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 4 )
+
+[node name="web" type="Sprite" parent="Web_Trigger" index="0"]
+
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Web_Trigger" index="1"]
+
+scale = Vector2( 13.8462, 13.8462 )
+shape = SubResource( 7 )
+
+[node name="Junk_Trigger" type="Area2D" parent="." index="2"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 6 )
+
+[node name="junk box" type="Sprite" parent="Junk_Trigger" index="0"]
+
+position = Vector2( 530, 340 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Junk_Trigger" index="1"]
+
+position = Vector2( 540, 420 )
+scale = Vector2( 6.92308, 6.15385 )
+shape = SubResource( 8 )
+
+[node name="Junk_Trigger2" type="Area2D" parent="." index="3"]
+
+position = Vector2( 340, -20 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 6 )
+
+[node name="junk box" type="Sprite" parent="Junk_Trigger2" index="0"]
+
+position = Vector2( 530, 340 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Junk_Trigger2" index="1"]
+
+position = Vector2( 540, 420 )
+scale = Vector2( 6.92308, 6.15385 )
+shape = SubResource( 8 )
+
+[node name="Junk_Trigger3" type="Area2D" parent="." index="4"]
+
+position = Vector2( 210, 30 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 6 )
+
+[node name="junk box" type="Sprite" parent="Junk_Trigger3" index="0"]
+
+position = Vector2( 530, 340 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Junk_Trigger3" index="1"]
+
+position = Vector2( 540, 420 )
+scale = Vector2( 6.92308, 6.15385 )
+shape = SubResource( 8 )
+
+[node name="Junk_Trigger4" type="Area2D" parent="." index="5"]
+
+position = Vector2( 60, 60 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 6 )
+
+[node name="junk box" type="Sprite" parent="Junk_Trigger4" index="0"]
+
+position = Vector2( 530, 340 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Junk_Trigger4" index="1"]
+
+position = Vector2( 540, 420 )
+scale = Vector2( 6.92308, 6.15385 )
+shape = SubResource( 8 )
+
+[node name="Junk_Trigger5" type="Area2D" parent="." index="6"]
+
+position = Vector2( 380, 60 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 6 )
+
+[node name="junk box" type="Sprite" parent="Junk_Trigger5" index="0"]
+
+position = Vector2( 530, 340 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Junk_Trigger5" index="1"]
+
+position = Vector2( 540, 420 )
+scale = Vector2( 6.92308, 6.15385 )
+shape = SubResource( 8 )
+
+[node name="DoorOpen" type="Sprite" parent="." index="7"]
+
+visible = false
+position = Vector2( 115, 211 )
+texture = ExtResource( 8 )
+
+[node name="Door_Trigger" type="Area2D" parent="." index="8"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 9 )
+
+[node name="DoorClosed" type="Sprite" parent="Door_Trigger" index="0"]
+
+position = Vector2( 190, 200 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door_Trigger" index="1"]
+
+position = Vector2( 190, 200 )
+scale = Vector2( 9.61539, 15 )
+shape = SubResource( 9 )
+
+[node name="dasd-removebg" type="Sprite" parent="." index="9"]
+
+visible = false
+position = Vector2( 205, 201 )
+scale = Vector2( 0.716532, 0.716532 )
+texture = ExtResource( 11 )
+
+[node name="LevelLabel" type="Label" parent="." index="10"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 443.0
+margin_bottom = 68.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 12 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Level 3"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Rect", "Size Flags", "Theme", "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="TidyText" type="Label" parent="." index="11"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 300.0
+margin_top = 540.0
+margin_right = 751.0
+margin_bottom = 598.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 12 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Does it spark clutter?"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Rect", "Size Flags", "Theme", "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="SuccessLabel" type="Label" parent="." index="12"]
+
+editor/display_folded = true
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 210.0
+margin_top = 180.0
+margin_right = 784.0
+margin_bottom = 282.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Feel the Joy!"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+script = ExtResource( 14 )
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="Next_Trigger" type="Area2D" parent="SuccessLabel" index="0"]
+
+position = Vector2( 280, 140 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 15 )
+
+[node name="Next Label" type="Label" parent="SuccessLabel/Next_Trigger" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -70.0
+margin_top = -30.0
+margin_right = 98.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 12 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Continue!"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SuccessLabel/Next_Trigger" index="1"]
+
+position = Vector2( 10, -10 )
+scale = Vector2( 5.5625, 2.42308 )
+shape = SubResource( 6 )
+
+[node name="GameOverGirl" type="Sprite" parent="." index="13"]
+
+editor/display_folded = true
+visible = false
+texture = ExtResource( 16 )
+centered = false
+script = ExtResource( 17 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="Retry_Trigger" type="Area2D" parent="GameOverGirl" index="0"]
+
+position = Vector2( 490, 270 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 18 )
+
+[node name="Retry Label" type="Label" parent="GameOverGirl/Retry_Trigger" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -50.0
+margin_top = -30.0
+margin_right = 79.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 12 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Retry?"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GameOverGirl/Retry_Trigger" index="1"]
+
+position = Vector2( 10, -10 )
+scale = Vector2( 5.5625, 2.42308 )
+shape = SubResource( 6 )
+
+[node name="GameOverLabel" type="Label" parent="GameOverGirl" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 280.0
+margin_top = 120.0
+margin_right = 734.0
+margin_bottom = 222.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Game Over!"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+
