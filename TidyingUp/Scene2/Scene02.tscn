@@ -1,32 +1,26 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Interior.png" type="Texture" id=1]
 [ext_resource path="res://Scene2/Scene02.gd" type="Script" id=2]
-[ext_resource path="res://Cactus Regular.otf" type="DynamicFontData" id=3]
-[ext_resource path="res://Scene2/SinkTrigger.gd" type="Script" id=4]
-[ext_resource path="res://Scene2/sink opened.png" type="Texture" id=5]
-[ext_resource path="res://Scene2/sink closed.png" type="Texture" id=6]
-[ext_resource path="res://Scene2/MirrorTrigger.gd" type="Script" id=7]
-[ext_resource path="res://Scene2/mirror closed.png" type="Texture" id=8]
-[ext_resource path="res://Scene2/mirror opened.png" type="Texture" id=9]
-[ext_resource path="res://Scene2/ToiletTrigger.gd" type="Script" id=10]
-[ext_resource path="res://Scene2/toilet opened.png" type="Texture" id=11]
-[ext_resource path="res://Scene2/toilet opened marie.png" type="Texture" id=12]
-[ext_resource path="res://Scene2/PlungerTrigger.gd" type="Script" id=13]
-[ext_resource path="res://Scene2/plunger.png" type="Texture" id=14]
+[ext_resource path="res://Scene2/SinkTrigger.gd" type="Script" id=3]
+[ext_resource path="res://Scene2/sink opened.png" type="Texture" id=4]
+[ext_resource path="res://Scene2/sink closed.png" type="Texture" id=5]
+[ext_resource path="res://Scene2/MirrorTrigger.gd" type="Script" id=6]
+[ext_resource path="res://Scene2/mirror closed.png" type="Texture" id=7]
+[ext_resource path="res://Scene2/mirror opened.png" type="Texture" id=8]
+[ext_resource path="res://Scene2/ToiletTrigger.gd" type="Script" id=9]
+[ext_resource path="res://Scene2/toilet opened.png" type="Texture" id=10]
+[ext_resource path="res://Scene2/toilet opened marie.png" type="Texture" id=11]
+[ext_resource path="res://Scene2/PlungerTrigger.gd" type="Script" id=12]
+[ext_resource path="res://Scene2/plunger.png" type="Texture" id=13]
+[ext_resource path="res://Cactus Regular.otf" type="DynamicFontData" id=14]
 [ext_resource path="res://images/GameOverGirl.png" type="Texture" id=15]
 [ext_resource path="res://GameOverGirl.gd" type="Script" id=16]
 [ext_resource path="res://Retry_Trigger.gd" type="Script" id=17]
 [ext_resource path="res://Cactus Reguar DFont.tres" type="DynamicFont" id=18]
 [ext_resource path="res://Cactus Regular.tres" type="DynamicFontData" id=19]
-
-[sub_resource type="DynamicFont" id=1]
-
-size = 48
-use_mipmaps = false
-use_filter = false
-font_data = ExtResource( 3 )
-_sections_unfolded = [ "Font", "Settings" ]
+[ext_resource path="res://SuccessLabel.gd" type="Script" id=20]
+[ext_resource path="res://Next_Trigger.gd" type="Script" id=21]
 
 [sub_resource type="RectangleShape2D" id=2]
 
@@ -43,23 +37,44 @@ extents = Vector2( 10.7714, 10 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=5]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 48
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 14 )
+_sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
 extents = Vector2( 16.1798, 10 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=7]
 
 size = 112
 use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 19 )
 _sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=8]
+
+size = 112
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 19 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="RectangleShape2D" id=9]
+
+custom_solver_bias = 0.0
+extents = Vector2( 16.1798, 10 )
 
 [node name="Scene02" type="Sprite" index="0"]
 
@@ -68,7 +83,127 @@ centered = false
 script = ExtResource( 2 )
 _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
-[node name="LevelLabel" type="Label" parent="." index="0"]
+[node name="SinkTrigger" type="Area2D" parent="." index="0"]
+
+editor/display_folded = true
+position = Vector2( 279.116, 306.824 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 3 )
+
+[node name="sink opened" type="Sprite" parent="SinkTrigger" index="0"]
+
+visible = false
+position = Vector2( 0.386566, -0.550354 )
+texture = ExtResource( 4 )
+
+[node name="sink closed" type="Sprite" parent="SinkTrigger" index="1"]
+
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SinkTrigger" index="2"]
+
+position = Vector2( 8.13005, 43.0067 )
+scale = Vector2( 4.31848, 5.23677 )
+shape = SubResource( 2 )
+
+[node name="MirrorTrigger" type="Area2D" parent="." index="1"]
+
+editor/display_folded = true
+position = Vector2( 279.761, 79.6824 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 6 )
+
+[node name="mirror closed" type="Sprite" parent="MirrorTrigger" index="0"]
+
+position = Vector2( -45.8291, 42.6568 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="mirror opened" type="Sprite" parent="MirrorTrigger" index="1"]
+
+visible = false
+position = Vector2( -49.2157, 48.6306 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MirrorTrigger" index="2"]
+
+position = Vector2( 9.74714, 44.9967 )
+scale = Vector2( 5.93283, 6.82518 )
+shape = SubResource( 3 )
+
+[node name="ToiletTrigger" type="Area2D" parent="." index="2"]
+
+editor/display_folded = true
+position = Vector2( 644.851, 322.718 )
+scale = Vector2( 1.5, 1.5 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 9 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="toilet opened" type="Sprite" parent="ToiletTrigger" index="0"]
+
+position = Vector2( 24.9859, 19.5077 )
+texture = ExtResource( 10 )
+
+[node name="toilet opened marie" type="Sprite" parent="ToiletTrigger" index="1"]
+
+visible = false
+position = Vector2( 23.1277, 21.6331 )
+texture = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ToiletTrigger" index="2"]
+
+position = Vector2( 33.3747, 41.4476 )
+scale = Vector2( 7.09819, 8.38877 )
+shape = SubResource( 4 )
+
+[node name="PlungerTrigger" type="Area2D" parent="." index="3"]
+
+editor/display_folded = true
+visible = false
+position = Vector2( 287.93, 124.653 )
+rotation = 0.523599
+scale = Vector2( 1.25, 1.25 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 12 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlungerTrigger" index="0"]
+
+position = Vector2( 1.92689, -0.631119 )
+scale = Vector2( 1.52433, 4.18355 )
+shape = SubResource( 5 )
+
+[node name="plunger" type="Sprite" parent="PlungerTrigger" index="1"]
+
+position = Vector2( 0.784317, -0.697876 )
+texture = ExtResource( 13 )
+
+[node name="LevelLabel" type="Label" parent="." index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -93,7 +228,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Rect", "Size Flags", "Theme", "custom_colors", "custom_fonts", "custom_styles" ]
 
-[node name="TidyText" type="Label" parent="." index="1"]
+[node name="TidyText" type="Label" parent="." index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -118,123 +253,6 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Rect", "Size Flags", "Theme", "custom_colors", "custom_fonts", "custom_styles" ]
-
-[node name="SinkTrigger" type="Area2D" parent="." index="2"]
-
-position = Vector2( 279.116, 306.824 )
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-script = ExtResource( 4 )
-
-[node name="sink opened" type="Sprite" parent="SinkTrigger" index="0"]
-
-visible = false
-position = Vector2( 0.386566, -0.550354 )
-texture = ExtResource( 5 )
-
-[node name="sink closed" type="Sprite" parent="SinkTrigger" index="1"]
-
-texture = ExtResource( 6 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SinkTrigger" index="2"]
-
-position = Vector2( 8.13005, 43.0067 )
-scale = Vector2( 4.31848, 5.23677 )
-shape = SubResource( 2 )
-
-[node name="MirrorTrigger" type="Area2D" parent="." index="3"]
-
-position = Vector2( 279.761, 79.6824 )
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-script = ExtResource( 7 )
-
-[node name="mirror closed" type="Sprite" parent="MirrorTrigger" index="0"]
-
-position = Vector2( -45.8291, 42.6568 )
-scale = Vector2( 1, 1 )
-texture = ExtResource( 8 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="mirror opened" type="Sprite" parent="MirrorTrigger" index="1"]
-
-visible = false
-position = Vector2( -49.2157, 48.6306 )
-texture = ExtResource( 9 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MirrorTrigger" index="2"]
-
-position = Vector2( 9.74714, 44.9967 )
-scale = Vector2( 5.93283, 6.82518 )
-shape = SubResource( 3 )
-
-[node name="ToiletTrigger" type="Area2D" parent="." index="4"]
-
-position = Vector2( 644.851, 322.718 )
-scale = Vector2( 1.5, 1.5 )
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-script = ExtResource( 10 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="toilet opened" type="Sprite" parent="ToiletTrigger" index="0"]
-
-position = Vector2( 24.9859, 19.5077 )
-texture = ExtResource( 11 )
-
-[node name="toilet opened marie" type="Sprite" parent="ToiletTrigger" index="1"]
-
-visible = false
-position = Vector2( 23.1277, 21.6331 )
-texture = ExtResource( 12 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ToiletTrigger" index="2"]
-
-position = Vector2( 33.3747, 41.4476 )
-scale = Vector2( 7.09819, 8.38877 )
-shape = SubResource( 4 )
-
-[node name="PlungerTrigger" type="Area2D" parent="." index="5"]
-
-visible = false
-position = Vector2( 287.93, 124.653 )
-rotation = 0.523599
-scale = Vector2( 1.25, 1.25 )
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-script = ExtResource( 13 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlungerTrigger" index="0"]
-
-position = Vector2( 1.92689, -0.631119 )
-scale = Vector2( 1.52433, 4.18355 )
-shape = SubResource( 7 )
-
-[node name="plunger" type="Sprite" parent="PlungerTrigger" index="1"]
-
-position = Vector2( 0.784317, -0.697876 )
-texture = ExtResource( 14 )
 
 [node name="GameOverGirl" type="Sprite" parent="." index="6"]
 
@@ -304,7 +322,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Game Over!"
@@ -313,5 +331,103 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="SuccessLabel" type="Label" parent="." index="7"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 210.0
+margin_top = 180.0
+margin_right = 784.0
+margin_bottom = 282.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Feel the Joy!"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+script = ExtResource( 20 )
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="Next_Trigger" type="Area2D" parent="SuccessLabel" index="0"]
+
+position = Vector2( 280, 140 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 21 )
+
+[node name="Next Label" type="Label" parent="SuccessLabel/Next_Trigger" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -70.0
+margin_top = -30.0
+margin_right = 98.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 18 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Continue!"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SuccessLabel/Next_Trigger" index="1"]
+
+position = Vector2( 10, -10 )
+scale = Vector2( 5.5625, 2.42308 )
+shape = SubResource( 9 )
+
+[node name="TidyText" type="Label" parent="SuccessLabel" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 90.0
+margin_top = 360.0
+margin_right = 523.0
+margin_bottom = 418.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 18 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Does it spark filth?"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Rect", "Size Flags", "Theme", "custom_colors", "custom_fonts", "custom_styles" ]
 
 
