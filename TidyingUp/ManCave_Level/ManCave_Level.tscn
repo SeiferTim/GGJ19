@@ -1,20 +1,24 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://images/Interior.png" type="Texture" id=1]
 [ext_resource path="res://ManCave_Level/ManCaveScene.gd" type="Script" id=2]
 [ext_resource path="res://ManCave_Level/tv and sign.png" type="Texture" id=3]
 [ext_resource path="res://ManCave_Level/table.png" type="Texture" id=4]
-[ext_resource path="res://ManCave_Level/bbq-pit.png" type="Texture" id=5]
-[ext_resource path="res://ManCave_Level/tv-remote.png" type="Texture" id=6]
-[ext_resource path="res://ManCave_Level/xbox-controller.png" type="Texture" id=7]
-[ext_resource path="res://ManCave_Level/mom.png" type="Texture" id=8]
-[ext_resource path="res://Fonts/Cactus Reguar DFont.tres" type="DynamicFont" id=9]
-[ext_resource path="res://Fonts/Cactus Regular.tres" type="DynamicFontData" id=10]
-[ext_resource path="res://SuccessLabel.gd" type="Script" id=11]
-[ext_resource path="res://Next_Trigger.gd" type="Script" id=12]
-[ext_resource path="res://images/GameOverGirl.png" type="Texture" id=13]
-[ext_resource path="res://GameOverGirl.gd" type="Script" id=14]
-[ext_resource path="res://Retry_Trigger.gd" type="Script" id=15]
+[ext_resource path="res://ManCave_Level/BBQPitTrigger.gd" type="Script" id=5]
+[ext_resource path="res://ManCave_Level/bbq-pit.png" type="Texture" id=6]
+[ext_resource path="res://ManCave_Level/TVRemoteTrigger.gd" type="Script" id=7]
+[ext_resource path="res://ManCave_Level/tv-remote.png" type="Texture" id=8]
+[ext_resource path="res://ManCave_Level/XboxControllerTrigger.gd" type="Script" id=9]
+[ext_resource path="res://ManCave_Level/xbox-controller.png" type="Texture" id=10]
+[ext_resource path="res://ManCave_Level/MomTrigger.gd" type="Script" id=11]
+[ext_resource path="res://ManCave_Level/mom.png" type="Texture" id=12]
+[ext_resource path="res://Fonts/Cactus Reguar DFont.tres" type="DynamicFont" id=13]
+[ext_resource path="res://Fonts/Cactus Regular.tres" type="DynamicFontData" id=14]
+[ext_resource path="res://SuccessLabel.gd" type="Script" id=15]
+[ext_resource path="res://Next_Trigger.gd" type="Script" id=16]
+[ext_resource path="res://images/GameOverGirl.png" type="Texture" id=17]
+[ext_resource path="res://GameOverGirl.gd" type="Script" id=18]
+[ext_resource path="res://Retry_Trigger.gd" type="Script" id=19]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -31,12 +35,17 @@ extents = Vector2( 10, 10 )
 custom_solver_bias = 0.0
 radius = 48.0812
 
+[sub_resource type="RectangleShape2D" id=6]
+
+custom_solver_bias = 0.0
+extents = Vector2( 53.0396, 170.939 )
+
 [sub_resource type="DynamicFont" id=4]
 
 size = 112
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 10 )
+font_data = ExtResource( 14 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="RectangleShape2D" id=5]
@@ -44,7 +53,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 custom_solver_bias = 0.0
 extents = Vector2( 16.1798, 10 )
 
-[node name="ManCaveScene" type="Sprite"]
+[node name="ManCaveScene" type="Sprite" index="0"]
 
 texture = ExtResource( 1 )
 centered = false
@@ -61,7 +70,7 @@ texture = ExtResource( 3 )
 position = Vector2( 227.265, 435.119 )
 texture = ExtResource( 4 )
 
-[node name="Area2D" type="Area2D" parent="." index="2"]
+[node name="BBQPitTrigger" type="Area2D" parent="." index="2"]
 
 position = Vector2( 546.477, 426.525 )
 input_pickable = true
@@ -71,12 +80,13 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
+script = ExtResource( 5 )
 
-[node name="bbq-pit" type="Sprite" parent="Area2D" index="0"]
+[node name="bbq-pit" type="Sprite" parent="BBQPitTrigger" index="0"]
 
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BBQPitTrigger" index="1"]
 
 position = Vector2( 1.22774, 2.93282 )
 scale = Vector2( 10.1052, 11.7579 )
@@ -92,11 +102,12 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
+script = ExtResource( 7 )
 
 [node name="tv-remote" type="Sprite" parent="TVRemoteTrigger" index="0"]
 
 position = Vector2( 2.58896, -3.18292 )
-texture = ExtResource( 6 )
+texture = ExtResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TVRemoteTrigger" index="1"]
 
@@ -114,21 +125,38 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
+script = ExtResource( 9 )
 
 [node name="xbox-controller" type="Sprite" parent="XboxControllerTrigger" index="0"]
 
 position = Vector2( -6.00525, -1.95517 )
-texture = ExtResource( 7 )
+texture = ExtResource( 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="XboxControllerTrigger" index="1"]
 
 position = Vector2( -7.36639, -2.45551 )
 shape = SubResource( 3 )
 
-[node name="mom" type="Sprite" parent="." index="5"]
+[node name="MomTrigger" type="Area2D" parent="." index="5"]
 
-position = Vector2( 913.57, 350.406 )
-texture = ExtResource( 8 )
+position = Vector2( 871.761, 386.784 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 11 )
+
+[node name="mom" type="Sprite" parent="MomTrigger" index="0"]
+
+position = Vector2( 1.09488, -1.65131 )
+texture = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MomTrigger" index="1"]
+
+shape = SubResource( 6 )
 
 [node name="LevelLabel" type="Label" parent="." index="6"]
 
@@ -146,7 +174,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 9 )
+custom_fonts/font = ExtResource( 13 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "The Man Cave"
@@ -180,7 +208,7 @@ align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-script = ExtResource( 11 )
+script = ExtResource( 15 )
 _sections_unfolded = [ "custom_colors", "custom_fonts" ]
 
 [node name="Next_Trigger" type="Area2D" parent="SuccessLabel" index="0"]
@@ -193,7 +221,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 12 )
+script = ExtResource( 16 )
 
 [node name="Next Label" type="Label" parent="SuccessLabel/Next_Trigger" index="0"]
 
@@ -211,7 +239,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 9 )
+custom_fonts/font = ExtResource( 13 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Continue!"
@@ -243,7 +271,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 9 )
+custom_fonts/font = ExtResource( 13 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Does it spark filth?"
@@ -256,9 +284,9 @@ _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "R
 [node name="GameOverGirl" type="Sprite" parent="." index="8"]
 
 visible = false
-texture = ExtResource( 13 )
+texture = ExtResource( 17 )
 centered = false
-script = ExtResource( 14 )
+script = ExtResource( 18 )
 _sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="Retry_Trigger" type="Area2D" parent="GameOverGirl" index="0"]
@@ -271,7 +299,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 15 )
+script = ExtResource( 19 )
 
 [node name="Retry Label" type="Label" parent="GameOverGirl/Retry_Trigger" index="0"]
 
@@ -289,7 +317,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 9 )
+custom_fonts/font = ExtResource( 13 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Retry?"
