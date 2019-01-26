@@ -45,12 +45,12 @@ extents = Vector2( 10, 10 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
 extents = Vector2( 20, 10 )
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=7]
 
 size = 112
 use_mipmaps = false
@@ -58,7 +58,7 @@ use_filter = false
 font_data = ExtResource( 14 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=8]
 
 custom_solver_bias = 0.0
 extents = Vector2( 16.1798, 10 )
@@ -179,7 +179,6 @@ shape = SubResource( 4 )
 
 editor/display_folded = true
 position = Vector2( -3.05176e-005, 0 )
-scale = Vector2( 1, 1 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -222,7 +221,7 @@ texture = ExtResource( 12 )
 
 position = Vector2( 490, 420 )
 scale = Vector2( 1, 3.19231 )
-shape = SubResource( 8 )
+shape = SubResource( 6 )
 
 [node name="LevelLabel" type="Label" parent="." index="8"]
 
@@ -293,7 +292,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Feel the Joy!"
@@ -346,7 +345,7 @@ _sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts", "cus
 
 position = Vector2( 10, -10 )
 scale = Vector2( 5.5625, 2.42308 )
-shape = SubResource( 7 )
+shape = SubResource( 8 )
 
 [node name="GameOverGirl" type="Sprite" parent="." index="11"]
 
@@ -399,7 +398,7 @@ _sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts", "cus
 
 position = Vector2( 10, -10 )
 scale = Vector2( 5.5625, 2.42308 )
-shape = SubResource( 7 )
+shape = SubResource( 8 )
 
 [node name="GameOverLabel" type="Label" parent="GameOverGirl" index="1"]
 
@@ -417,7 +416,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Game Over!"

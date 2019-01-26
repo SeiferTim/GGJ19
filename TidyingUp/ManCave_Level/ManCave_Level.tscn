@@ -53,7 +53,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 custom_solver_bias = 0.0
 extents = Vector2( 16.1798, 10 )
 
-[node name="ManCaveScene" type="Sprite" index="0"]
+[node name="ManCaveScene" type="Sprite"]
 
 texture = ExtResource( 1 )
 centered = false
