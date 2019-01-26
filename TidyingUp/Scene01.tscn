@@ -55,7 +55,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 custom_solver_bias = 0.0
 extents = Vector2( 16.1798, 10 )
 
-[node name="Scene01" type="Sprite" index="0"]
+[node name="Scene01" type="Sprite"]
 
 texture = ExtResource( 1 )
 centered = false
@@ -70,7 +70,6 @@ texture = ExtResource( 3 )
 
 [node name="DoorClosed_Trigger" type="Area2D" parent="." index="1"]
 
-editor/display_folded = true
 position = Vector2( 240, 260 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
