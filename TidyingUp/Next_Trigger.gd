@@ -1,12 +1,6 @@
 extends Area2D
 
 
-func _ready():
-	# Called when the node is added to the scene for the first time.
-	# Initial
-	pass
-
-
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton \
     and event.button_index == BUTTON_LEFT \
