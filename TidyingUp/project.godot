@@ -11,7 +11,7 @@ config_version=3
 [application]
 
 config/name="TidyingUp"
-run/main_scene="res://Scene01.tscn"
+run/main_scene="res://Trash_Level/Trash_Level.tscn"
 config/icon="res://icon.png"
 
 [display]
