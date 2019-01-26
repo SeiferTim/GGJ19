@@ -1,13 +1,16 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Interior.png" type="Texture" id=1]
 [ext_resource path="res://Cactus Regular.otf" type="DynamicFontData" id=2]
-[ext_resource path="res://DoorClosed.png" type="Texture" id=3]
-[ext_resource path="res://TrashbagOpen.png" type="Texture" id=4]
-[ext_resource path="res://OpenTrashcan.png" type="Texture" id=5]
-[ext_resource path="res://TrashcanLid.png" type="Texture" id=6]
-[ext_resource path="res://TrashcanLid.gd" type="Script" id=7]
-[ext_resource path="res://TrashbagClosed.png" type="Texture" id=8]
+[ext_resource path="res://images/DoorOpen.png" type="Texture" id=3]
+[ext_resource path="res://DoorClosed.png" type="Texture" id=4]
+[ext_resource path="res://DoorClosed.gd" type="Script" id=5]
+[ext_resource path="res://TrashbagOpen.png" type="Texture" id=6]
+[ext_resource path="res://OpenTrashcan.png" type="Texture" id=7]
+[ext_resource path="res://TrashcanLid.png" type="Texture" id=8]
+[ext_resource path="res://TrashcanLid.gd" type="Script" id=9]
+[ext_resource path="res://TrashbagClosed.png" type="Texture" id=10]
+[ext_resource path="res://images/the-full-kondo.png" type="Texture" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -74,35 +77,58 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Rect", "Size Flags", "Theme", "custom_colors", "custom_fonts", "custom_styles" ]
 
-[node name="DoorClosed" type="Sprite" parent="." index="2"]
+[node name="DoorOpen" type="Sprite" parent="." index="2"]
 
-position = Vector2( 240, 260 )
+visible = false
+position = Vector2( 150, 280 )
 texture = ExtResource( 3 )
 
-[node name="TrashbagOpen" type="Sprite" parent="." index="3"]
+[node name="DoorClosed" type="Sprite" parent="." index="3"]
+
+position = Vector2( 240, 260 )
+texture = ExtResource( 4 )
+script = ExtResource( 5 )
+_sections_unfolded = [ "Material", "Visibility" ]
+
+[node name="TrashbagOpen" type="Sprite" parent="." index="4"]
 
 visible = false
 position = Vector2( 742, 290 )
-texture = ExtResource( 4 )
+texture = ExtResource( 6 )
 _sections_unfolded = [ "Visibility" ]
 
-[node name="OpenTrashcan" type="Sprite" parent="." index="4"]
+[node name="OpenTrashcan" type="Sprite" parent="." index="5"]
 
 position = Vector2( 740, 380 )
-texture = ExtResource( 5 )
+texture = ExtResource( 7 )
 _sections_unfolded = [ "Visibility" ]
 
-[node name="TrashcanLid" type="Sprite" parent="." index="5"]
+[node name="TrashcanLid" type="Sprite" parent="." index="6"]
 
 position = Vector2( 740, 280 )
-texture = ExtResource( 6 )
-script = ExtResource( 7 )
+texture = ExtResource( 8 )
+script = ExtResource( 9 )
 
-[node name="TrashbagClosed" type="Sprite" parent="." index="6"]
+[node name="TrashcanLid2" type="Sprite" parent="." index="7"]
+
+visible = false
+position = Vector2( 615.053, 440.106 )
+rotation = -0.251924
+texture = ExtResource( 8 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="TrashbagClosed" type="Sprite" parent="." index="8"]
 
 visible = false
 position = Vector2( 600, 310 )
-texture = ExtResource( 8 )
+texture = ExtResource( 10 )
 _sections_unfolded = [ "Visibility" ]
+
+[node name="the-full-kondo" type="Sprite" parent="." index="9"]
+
+visible = false
+position = Vector2( 230, 300 )
+scale = Vector2( 0.538938, 0.538938 )
+texture = ExtResource( 11 )
 
 
