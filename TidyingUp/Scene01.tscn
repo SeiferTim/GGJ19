@@ -255,7 +255,6 @@ _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "R
 
 [node name="SuccessLabel" type="Label" parent="." index="11"]
 
-editor/display_folded = true
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0

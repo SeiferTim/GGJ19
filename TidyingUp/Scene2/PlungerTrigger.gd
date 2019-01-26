@@ -1,7 +1,14 @@
 extends Area2D
 
+var picked_up = false
+
 func _ready():
 	pass
+	
+
+func _process(delta):
+	if picked_up:
+		self.position = get_viewport().get_mouse_position()
 
 func _input_event(viewport, event, shape_idx):
 	if self.get_parent().game_over:
@@ -13,6 +20,4 @@ func _input_event(viewport, event, shape_idx):
         self.on_click()
 
 func on_click():
-	self.get_node("mirror opened").visible = true
-	self.get_node("mirror closed").visible = false
-	self.get_parent().get_node("PlungerTrigger").show()
+	picked_up = true
