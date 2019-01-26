@@ -14,4 +14,4 @@ func _input_event(viewport, event, shape_idx):
         self.on_click()
 
 func on_click():
-	#get_tree()
+	get_tree().reload_current_scene()

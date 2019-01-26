@@ -11,5 +11,4 @@ func _input_event(viewport, event, shape_idx):
 
 func on_click():
 	self.visible = false
-	self.get_parent().get_node("TrashcanLid2").visible = true
-	self.get_parent().get_node("TrashbagOpen_Trigger").visible = true
+	self.get_parent().get_node("Poop1_Trigger").visible = true

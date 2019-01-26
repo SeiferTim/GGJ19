@@ -1,5 +1,6 @@
 extends Area2D
 
+
 func _input_event(viewport, event, shape_idx):
 	if self.get_parent().game_over || self.get_parent().level_win:
 		pass
@@ -11,5 +12,4 @@ func _input_event(viewport, event, shape_idx):
 
 func on_click():
 	self.visible = false
-	self.get_parent().get_node("TrashcanLid2").visible = true
-	self.get_parent().get_node("TrashbagOpen_Trigger").visible = true
+	self.get_parent().get_node("Poop2_Trigger").visible = true

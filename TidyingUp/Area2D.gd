@@ -15,7 +15,7 @@ func _ready():
 #	pass
 
 func _input_event(viewport, event, shape_idx):
-	if self.get_parent().game_over:
+	if self.get_parent().game_over || self.get_parent().level_win:
 		pass
 	if event is InputEventMouseButton \
     and event.button_index == BUTTON_LEFT \
