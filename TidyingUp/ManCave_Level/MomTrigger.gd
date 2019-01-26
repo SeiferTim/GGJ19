@@ -16,12 +16,19 @@ func _input_event(viewport, event, shape_idx):
         self.on_click()
 
 func on_click():
-	if position != original_position:
-		position = original_position
-		blocking_object = null
-		
+	if blocking_object != null && !is_home():
+		send_home()
+
 func is_blocking(object):
 	return blocking_object == object
 
 func set_blocking(object):
 	blocking_object = object
+	if object != null:
+		position = object.position
+	
+func is_home():
+	return self.position == original_position
+
+func send_home():
+	self.position = original_position

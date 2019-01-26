@@ -1,7 +1,5 @@
 extends Area2D
 
-var has_been_blocked = false
-
 func _input_event(viewport, event, shape_idx):
 	if self.get_parent().game_over || self.get_parent().level_win:
 		return
@@ -12,11 +10,9 @@ func _input_event(viewport, event, shape_idx):
         self.on_click()
 
 func on_click():
-	if !has_been_blocked:
-		has_been_blocked = true
-		var mom = self.get_parent().get_node("MomTrigger")
-		mom.position = self.position
+	var mom = self.get_parent().get_node("MomTrigger")
+	if mom.is_blocking(self) && mom.is_home():
+		self.visible = false
+		mom.is_blocking(null)
+	if !mom.is_blocking(self):
 		mom.set_blocking(self)
-	else:
-		if !self.get_parent().get_node("MomTrigger").is_blocking(self):
-			self.visible = false
