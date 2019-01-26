@@ -2,7 +2,7 @@ extends Area2D
 
 func _input_event(viewport, event, shape_idx):
 	if self.get_parent().get_parent().game_over || self.get_parent().get_parent().level_win:
-		pass
+		return
 	if event is InputEventMouseButton \
     and event.button_index == BUTTON_LEFT \
     and event.is_pressed() \

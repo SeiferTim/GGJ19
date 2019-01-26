@@ -5,11 +5,6 @@ var hopTimer = 1
 var word = 0
 var words = ["Bork2", "Yip2", "Ruff2"]
 
-func _ready():
-	# Called when the node is added to the scene for the first time.
-	# Initialization here
-	pass
-
 func _process(delta):
 	if self.visible:
 		if hopTimer > 0:
