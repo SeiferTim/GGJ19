@@ -21,27 +21,27 @@
 [ext_resource path="res://images/GameOverGirl.png" type="Texture" id=19]
 [ext_resource path="res://GameOverGirl.gd" type="Script" id=20]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10.9859, 10 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
 extents = Vector2( 8.74519, 10.5 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=5]
 
 size = 112
 use_mipmaps = false
@@ -49,12 +49,12 @@ use_filter = false
 font_data = ExtResource( 16 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
 extents = Vector2( 16.1798, 10 )
 
-[node name="Scene01" type="Sprite" index="0"]
+[node name="Scene01" type="Sprite"]
 
 position = Vector2( -10, 0 )
 texture = ExtResource( 1 )
@@ -70,7 +70,6 @@ texture = ExtResource( 3 )
 
 [node name="DoorClosed_Trigger" type="Area2D" parent="." index="1"]
 
-editor/display_folded = true
 position = Vector2( 240, 260 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -90,7 +89,7 @@ _sections_unfolded = [ "Material", "Visibility" ]
 
 position = Vector2( 5, 9.05991e-006 )
 scale = Vector2( 10.3846, 14.6154 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="TrashbagOpen_Trigger" type="Area2D" parent="." index="2"]
 
@@ -115,7 +114,7 @@ _sections_unfolded = [ "Visibility" ]
 
 position = Vector2( -2, -25.75 )
 scale = Vector2( 8.19231, 3.51923 )
-shape = SubResource( 6 )
+shape = SubResource( 2 )
 
 [node name="OpenTrashcan" type="Sprite" parent="." index="3"]
 
@@ -144,7 +143,7 @@ texture = ExtResource( 10 )
 
 position = Vector2( 0, -10 )
 scale = Vector2( 10.2914, 3.80952 )
-shape = SubResource( 5 )
+shape = SubResource( 3 )
 
 [node name="TrashcanLid2" type="Sprite" parent="." index="5"]
 
@@ -185,7 +184,7 @@ _sections_unfolded = [ "Visibility" ]
 
 position = Vector2( 20, 45 )
 scale = Vector2( 12.3077, 11.9231 )
-shape = SubResource( 7 )
+shape = SubResource( 4 )
 disabled = true
 
 [node name="DeleriousKid" type="Sprite" parent="." index="8"]
@@ -272,7 +271,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Feel the Joy!"
@@ -325,7 +324,7 @@ _sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts", "cus
 
 position = Vector2( 10, -10 )
 scale = Vector2( 5.5625, 2.42308 )
-shape = SubResource( 4 )
+shape = SubResource( 6 )
 
 [node name="GameOverGirl" type="Sprite" parent="." index="12"]
 
@@ -377,7 +376,7 @@ _sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts", "cus
 
 position = Vector2( 10, -10 )
 scale = Vector2( 5.5625, 2.42308 )
-shape = SubResource( 4 )
+shape = SubResource( 6 )
 
 [node name="GameOverLabel" type="Label" parent="GameOverGirl" index="1"]
 
@@ -395,7 +394,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Game Over!"
