@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Interior.png" type="Texture" id=1]
 [ext_resource path="res://Cactus Regular.otf" type="DynamicFontData" id=2]
@@ -6,7 +6,8 @@
 [ext_resource path="res://TrashbagOpen.png" type="Texture" id=4]
 [ext_resource path="res://OpenTrashcan.png" type="Texture" id=5]
 [ext_resource path="res://TrashcanLid.png" type="Texture" id=6]
-[ext_resource path="res://TrashbagClosed.png" type="Texture" id=7]
+[ext_resource path="res://TrashcanLid.gd" type="Script" id=7]
+[ext_resource path="res://TrashbagClosed.png" type="Texture" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -95,12 +96,13 @@ _sections_unfolded = [ "Visibility" ]
 
 position = Vector2( 740, 280 )
 texture = ExtResource( 6 )
+script = ExtResource( 7 )
 
 [node name="TrashbagClosed" type="Sprite" parent="." index="6"]
 
 visible = false
 position = Vector2( 600, 310 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 _sections_unfolded = [ "Visibility" ]
 
 
