@@ -8,7 +8,7 @@
 [ext_resource path="res://Team_Level/Jevion.png" type="Texture" id=6]
 [ext_resource path="res://Team_Level/Laray.png" type="Texture" id=7]
 
-[node name="Team_Level" type="Sprite" index="0"]
+[node name="Team_Level" type="Sprite"]
 
 texture = ExtResource( 1 )
 centered = false

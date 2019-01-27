@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tv off.png-cbd5b9fa77fc6501e60547d794562059.stex"
+path="res://.import/xbox controller small.png-652bcff4a9ad5fedf00cfca3a42f7a35.stex"
 
 [deps]
 
-source_file="res://images/Living Room Level/tv off.png"
-dest_files=[ "res://.import/tv off.png-cbd5b9fa77fc6501e60547d794562059.stex" ]
+source_file="res://LivingRoom_Level/xbox controller small.png"
+dest_files=[ "res://.import/xbox controller small.png-652bcff4a9ad5fedf00cfca3a42f7a35.stex" ]
 
 [params]
 

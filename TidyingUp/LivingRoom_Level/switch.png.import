@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/modem.png-acbfe0ff6cf26e598641b649c69db866.stex"
+path="res://.import/switch.png-076d13df64764cf88e79399b7c51cf8c.stex"
 
 [deps]
 
-source_file="res://images/Living Room Level/modem.png"
-dest_files=[ "res://.import/modem.png-acbfe0ff6cf26e598641b649c69db866.stex" ]
+source_file="res://LivingRoom_Level/switch.png"
+dest_files=[ "res://.import/switch.png-076d13df64764cf88e79399b7c51cf8c.stex" ]
 
 [params]
 

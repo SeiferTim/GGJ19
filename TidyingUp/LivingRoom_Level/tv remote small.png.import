@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/gameboycolor.png-04dcb058cb89dbd9b6109bd826481112.stex"
+path="res://.import/tv remote small.png-308ecd6c82c6930189274fc33d702d1c.stex"
 
 [deps]
 
-source_file="res://images/Living Room Level/gameboycolor.png"
-dest_files=[ "res://.import/gameboycolor.png-04dcb058cb89dbd9b6109bd826481112.stex" ]
+source_file="res://LivingRoom_Level/tv remote small.png"
+dest_files=[ "res://.import/tv remote small.png-308ecd6c82c6930189274fc33d702d1c.stex" ]
 
 [params]
 

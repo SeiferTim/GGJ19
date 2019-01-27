@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bomb LOL.png-787ed93695069665a076e784836506fe.stex"
+path="res://.import/tv stand.png-e8c474a8bad4c8f79c701063cab32099.stex"
 
 [deps]
 
-source_file="res://images/Living Room Level/bomb LOL.png"
-dest_files=[ "res://.import/bomb LOL.png-787ed93695069665a076e784836506fe.stex" ]
+source_file="res://LivingRoom_Level/tv stand.png"
+dest_files=[ "res://.import/tv stand.png-e8c474a8bad4c8f79c701063cab32099.stex" ]
 
 [params]
 

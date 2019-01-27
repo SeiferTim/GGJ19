@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tv stand.png-83517c3faba4c498c4db8097ee5506f3.stex"
+path="res://.import/reference.png-14f6c54b56c789b8c353f5994d7342ab.stex"
 
 [deps]
 
-source_file="res://images/Living Room Level/tv stand.png"
-dest_files=[ "res://.import/tv stand.png-83517c3faba4c498c4db8097ee5506f3.stex" ]
+source_file="res://LivingRoom_Level/reference.png"
+dest_files=[ "res://.import/reference.png-14f6c54b56c789b8c353f5994d7342ab.stex" ]
 
 [params]
 

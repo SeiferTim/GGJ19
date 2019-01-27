@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/xbox controller small.png-e30ba5da7b4fdf0a658093ddbfe47b95.stex"
+path="res://.import/bomb LOL.png-df70da643e862376526dd603ac47c4f8.stex"
 
 [deps]
 
-source_file="res://images/Living Room Level/xbox controller small.png"
-dest_files=[ "res://.import/xbox controller small.png-e30ba5da7b4fdf0a658093ddbfe47b95.stex" ]
+source_file="res://LivingRoom_Level/bomb LOL.png"
+dest_files=[ "res://.import/bomb LOL.png-df70da643e862376526dd603ac47c4f8.stex" ]
 
 [params]
 

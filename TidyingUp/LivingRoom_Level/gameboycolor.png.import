@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/nintendo 64.png-1aeb3438f91ed81432eb05314f747cab.stex"
+path="res://.import/gameboycolor.png-5d2e9e55af430ab746775b1b1ea095b2.stex"
 
 [deps]
 
-source_file="res://images/Living Room Level/nintendo 64.png"
-dest_files=[ "res://.import/nintendo 64.png-1aeb3438f91ed81432eb05314f747cab.stex" ]
+source_file="res://LivingRoom_Level/gameboycolor.png"
+dest_files=[ "res://.import/gameboycolor.png-5d2e9e55af430ab746775b1b1ea095b2.stex" ]
 
 [params]
 

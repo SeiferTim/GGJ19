@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tv remote small.png-a0f665ac0e37899ca0badd0ed0bf3a66.stex"
+path="res://.import/modem.png-15b8735776e20252cf7005f8e610a037.stex"
 
 [deps]
 
-source_file="res://images/Living Room Level/tv remote small.png"
-dest_files=[ "res://.import/tv remote small.png-a0f665ac0e37899ca0badd0ed0bf3a66.stex" ]
+source_file="res://LivingRoom_Level/modem.png"
+dest_files=[ "res://.import/modem.png-15b8735776e20252cf7005f8e610a037.stex" ]
 
 [params]
 

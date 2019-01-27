@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/reference.png-d3e7103d22515ada72e53c1871601c85.stex"
+path="res://.import/nintendo 64.png-e03934a735572303d1e4c8e1b9d7b0a9.stex"
 
 [deps]
 
-source_file="res://images/Living Room Level/reference.png"
-dest_files=[ "res://.import/reference.png-d3e7103d22515ada72e53c1871601c85.stex" ]
+source_file="res://LivingRoom_Level/nintendo 64.png"
+dest_files=[ "res://.import/nintendo 64.png-e03934a735572303d1e4c8e1b9d7b0a9.stex" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/switch.png-dfc3a4fa849e0e17bdc33108c6a0dbf8.stex"
+path="res://.import/tv off.png-3f8d86db2f1d2de0d70e60cf4c67dacf.stex"
 
 [deps]
 
-source_file="res://images/Living Room Level/switch.png"
-dest_files=[ "res://.import/switch.png-dfc3a4fa849e0e17bdc33108c6a0dbf8.stex" ]
+source_file="res://LivingRoom_Level/tv off.png"
+dest_files=[ "res://.import/tv off.png-3f8d86db2f1d2de0d70e60cf4c67dacf.stex" ]
 
 [params]
 
