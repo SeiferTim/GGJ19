@@ -15,6 +15,8 @@ func _process(delta):
 			if step == 2:
 				get_node("the-full-kondo").visible = true
 			if step == 3:
+				get_node("Label3").visible = true
+			if step == 4:
 				get_node("Start_Trigger").visible  = true
 				delay = -1000
 			step+=1
