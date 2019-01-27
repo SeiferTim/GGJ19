@@ -1,11 +1,8 @@
 extends Area2D
 
-func _ready():
-	pass
-
 func _input_event(viewport, event, shape_idx):
-	if self.get_parent().game_over:
-		pass
+	if self.get_parent().game_over || self.get_parent().level_win:
+		return
 	if event is InputEventMouseButton \
     and event.button_index == BUTTON_LEFT \
     and event.is_pressed() \
@@ -15,5 +12,6 @@ func _input_event(viewport, event, shape_idx):
 		self.on_click()
 
 func on_click():
-	self.get_node("sink opened").visible = true
-	self.get_node("sink closed").visible = false
+	self.visible = false
+	get_parent().get_node("OpenCoffin").visible = true
+	get_parent().game_over = true

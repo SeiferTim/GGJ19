@@ -1,0 +1,467 @@
+[gd_scene load_steps=35 format=2]
+
+[ext_resource path="res://images/Interior.png" type="Texture" id=1]
+[ext_resource path="res://Funeral_Level/Funeral_Level.gd" type="Script" id=2]
+[ext_resource path="res://Funeral_Level/Coffin_Trigger.gd" type="Script" id=3]
+[ext_resource path="res://Funeral_Level/Coffin.png" type="Texture" id=4]
+[ext_resource path="res://Funeral_Level/OpenCoffin.png" type="Texture" id=5]
+[ext_resource path="res://images/dasd-removebg.png" type="Texture" id=6]
+[ext_resource path="res://Funeral_Level/Stand_Trigger.gd" type="Script" id=7]
+[ext_resource path="res://Funeral_Level/ConcessionStand.png" type="Texture" id=8]
+[ext_resource path="res://Funeral_Level/Balloon_Trigger.gd" type="Script" id=9]
+[ext_resource path="res://Funeral_Level/balloon yellow.png" type="Texture" id=10]
+[ext_resource path="res://Funeral_Level/balloon red.png" type="Texture" id=11]
+[ext_resource path="res://Funeral_Level/balloon blue.png" type="Texture" id=12]
+[ext_resource path="res://Funeral_Level/SadClown.png" type="Texture" id=13]
+[ext_resource path="res://Funeral_Level/SadClown.gd" type="Script" id=14]
+[ext_resource path="res://Funeral_Level/Juke_Trigger.gd" type="Script" id=15]
+[ext_resource path="res://Funeral_Level/jukebox.png" type="Texture" id=16]
+[ext_resource path="res://Funeral_Level/Bear_Trigger.gd" type="Script" id=17]
+[ext_resource path="res://Funeral_Level/bear.png" type="Texture" id=18]
+[ext_resource path="res://Fonts/Cactus Reguar DFont.tres" type="DynamicFont" id=19]
+[ext_resource path="res://Fonts/Cactus Regular.tres" type="DynamicFontData" id=20]
+[ext_resource path="res://SuccessLabel.gd" type="Script" id=21]
+[ext_resource path="res://Next_Trigger.gd" type="Script" id=22]
+[ext_resource path="res://images/GameOverGirl.png" type="Texture" id=23]
+[ext_resource path="res://GameOverGirl.gd" type="Script" id=24]
+[ext_resource path="res://Retry_Trigger.gd" type="Script" id=25]
+
+[sub_resource type="RectangleShape2D" id=6]
+
+custom_solver_bias = 0.0
+extents = Vector2( 11.102, 10 )
+
+[sub_resource type="RectangleShape2D" id=7]
+
+custom_solver_bias = 0.0
+extents = Vector2( 200, 140 )
+
+[sub_resource type="CircleShape2D" id=3]
+
+custom_solver_bias = 0.0
+radius = 10.0
+
+[sub_resource type="CircleShape2D" id=4]
+
+custom_solver_bias = 0.0
+radius = 10.0
+
+[sub_resource type="CircleShape2D" id=5]
+
+custom_solver_bias = 0.0
+radius = 10.0
+
+[sub_resource type="RectangleShape2D" id=8]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="CircleShape2D" id=9]
+
+custom_solver_bias = 0.0
+radius = 10.0
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 112
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 20 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 16.1798, 10 )
+
+[node name="Funeral_Level" type="Sprite" index="0"]
+
+texture = ExtResource( 1 )
+centered = false
+script = ExtResource( 2 )
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+
+[node name="Coffin_Trigger" type="Area2D" parent="." index="0"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 3 )
+
+[node name="Coffin" type="Sprite" parent="Coffin_Trigger" index="0"]
+
+position = Vector2( 530, 380 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coffin_Trigger" index="1"]
+
+position = Vector2( 530, 380 )
+scale = Vector2( 19.0856, 7.30769 )
+shape = SubResource( 6 )
+
+[node name="OpenCoffin" type="Sprite" parent="." index="1"]
+
+visible = false
+position = Vector2( 530, 370 )
+texture = ExtResource( 5 )
+
+[node name="dasd-removebg" type="Sprite" parent="OpenCoffin" index="0"]
+
+position = Vector2( 58.195, -84.5125 )
+rotation = -0.0813228
+scale = Vector2( 0.526383, 0.526383 )
+texture = ExtResource( 6 )
+
+[node name="Stand_Trigger" type="Area2D" parent="." index="2"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 7 )
+
+[node name="ConcessionStand" type="Sprite" parent="Stand_Trigger" index="0"]
+
+position = Vector2( 530, 280 )
+scale = Vector2( 0.719685, 0.719685 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stand_Trigger" index="1"]
+
+position = Vector2( 541.5, 276.5 )
+scale = Vector2( 1.18966, 1.51399 )
+shape = SubResource( 7 )
+
+[node name="Balloon_Trigger" type="Area2D" parent="." index="3"]
+
+position = Vector2( 735.659, 213.579 )
+rotation = 0.263107
+scale = Vector2( 0.572519, 0.572519 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 9 )
+
+[node name="balloon yellow" type="Sprite" parent="Balloon_Trigger" index="0"]
+
+texture = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Balloon_Trigger" index="1"]
+
+position = Vector2( 0.177856, -118.501 )
+scale = Vector2( 7.537, 8.05877 )
+shape = SubResource( 3 )
+
+[node name="Balloon_Trigger2" type="Area2D" parent="." index="4"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 9 )
+
+[node name="balloon red" type="Sprite" parent="Balloon_Trigger2" index="0"]
+
+position = Vector2( 685.659, 203.579 )
+rotation = -0.152512
+scale = Vector2( 0.572519, 0.572519 )
+texture = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Balloon_Trigger2" index="1"]
+
+position = Vector2( 673.619, 138.927 )
+scale = Vector2( 3.5678, 4.69794 )
+shape = SubResource( 4 )
+
+[node name="Balloon_Trigger3" type="Area2D" parent="." index="5"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 9 )
+
+[node name="balloon blue" type="Sprite" parent="Balloon_Trigger3" index="0"]
+
+position = Vector2( 710, 190 )
+scale = Vector2( 0.572519, 0.572519 )
+texture = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Balloon_Trigger3" index="1"]
+
+position = Vector2( 710, 122.5 )
+scale = Vector2( 3.84616, 4.42308 )
+shape = SubResource( 5 )
+
+[node name="SadClown" type="Sprite" parent="." index="6"]
+
+position = Vector2( 790, 360 )
+scale = Vector2( 0.572519, 0.572519 )
+texture = ExtResource( 13 )
+script = ExtResource( 14 )
+
+[node name="Juke_Trigger" type="Area2D" parent="." index="7"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 15 )
+
+[node name="jukebox" type="Sprite" parent="Juke_Trigger" index="0"]
+
+position = Vector2( 120, 350 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Juke_Trigger" index="1"]
+
+position = Vector2( 120, 345 )
+scale = Vector2( 6.92308, 9.61539 )
+shape = SubResource( 8 )
+
+[node name="Bear_Trigger" type="Area2D" parent="." index="8"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 17 )
+
+[node name="bear" type="Sprite" parent="Bear_Trigger" index="0"]
+
+position = Vector2( 310, 420 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 18 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bear_Trigger" index="1"]
+
+position = Vector2( 290, 420 )
+scale = Vector2( 11.1538, 11.9231 )
+shape = SubResource( 9 )
+
+[node name="LevelLabel" type="Label" parent="." index="9"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 20.0
+margin_top = 10.0
+margin_right = 453.0
+margin_bottom = 68.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 19 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Level 6"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Rect", "Size Flags", "Theme", "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="TidyText" type="Label" parent="." index="10"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 300.0
+margin_top = 540.0
+margin_right = 751.0
+margin_bottom = 598.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 19 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Does it spark mirth?"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Rect", "Size Flags", "Theme", "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="SuccessLabel" type="Label" parent="." index="11"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 210.0
+margin_top = 180.0
+margin_right = 784.0
+margin_bottom = 282.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Feel the Joy!"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+script = ExtResource( 21 )
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="Next_Trigger" type="Area2D" parent="SuccessLabel" index="0"]
+
+position = Vector2( 280, 140 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 22 )
+
+[node name="Next Label" type="Label" parent="SuccessLabel/Next_Trigger" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -70.0
+margin_top = -30.0
+margin_right = 98.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 19 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Continue!"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SuccessLabel/Next_Trigger" index="1"]
+
+position = Vector2( 10, -10 )
+scale = Vector2( 5.5625, 2.42308 )
+shape = SubResource( 2 )
+
+[node name="GameOverGirl" type="Sprite" parent="." index="12"]
+
+visible = false
+texture = ExtResource( 23 )
+centered = false
+script = ExtResource( 24 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="Retry_Trigger" type="Area2D" parent="GameOverGirl" index="0"]
+
+position = Vector2( 490, 270 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 25 )
+
+[node name="Retry Label" type="Label" parent="GameOverGirl/Retry_Trigger" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -50.0
+margin_top = -30.0
+margin_right = 79.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 19 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Retry?"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GameOverGirl/Retry_Trigger" index="1"]
+
+position = Vector2( 10, -10 )
+scale = Vector2( 5.5625, 2.42308 )
+shape = SubResource( 2 )
+
+[node name="GameOverLabel" type="Label" parent="GameOverGirl" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 280.0
+margin_top = 120.0
+margin_right = 734.0
+margin_bottom = 222.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Game Over!"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+

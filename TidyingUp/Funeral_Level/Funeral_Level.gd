@@ -14,8 +14,7 @@ func _ready():
 	# Initialization here
 
 	pass
-
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+func _process(delta):
+	if !game_over && !level_win:
+		if !(get_node("Stand_Trigger").visible || get_node("Balloon_Trigger").visible || get_node("Balloon_Trigger2").visible || get_node("Balloon_Trigger3").visible || get_node("Juke_Trigger").visible|| get_node("Bear_Trigger").visible):
+				level_win = true

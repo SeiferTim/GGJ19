@@ -47,7 +47,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 custom_solver_bias = 0.0
 extents = Vector2( 16.1798, 10 )
 
-[node name="Basement_Level" type="Sprite" index="0"]
+[node name="Basement_Level" type="Sprite"]
 
 texture = ExtResource( 1 )
 centered = false
@@ -159,6 +159,7 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 6 )
+_sections_unfolded = [ "Z Index" ]
 
 [node name="junk box" type="Sprite" parent="Junk_Trigger4" index="0"]
 

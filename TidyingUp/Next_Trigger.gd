@@ -6,7 +6,8 @@ func _input_event(viewport, event, shape_idx):
     and event.button_index == BUTTON_LEFT \
     and event.is_pressed() \
 	and self.visible:
-        self.on_click()
+		get_tree().set_input_as_handled()
+		self.on_click()
 
 func on_click():
 	get_tree().change_scene(get_parent().get_parent().next_scene)
