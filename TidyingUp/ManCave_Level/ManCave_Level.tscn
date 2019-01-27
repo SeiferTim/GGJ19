@@ -51,7 +51,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 custom_solver_bias = 0.0
 extents = Vector2( 16.1798, 10 )
 
-[node name="ManCaveScene" type="Sprite" index="0"]
+[node name="ManCaveScene" type="Sprite"]
 
 texture = ExtResource( 1 )
 centered = false
@@ -60,7 +60,7 @@ _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
 [node name="tv and sign" type="Sprite" parent="." index="0"]
 
-position = Vector2( 648.379, 141.69 )
+position = Vector2( 648.379, 141.091 )
 texture = ExtResource( 3 )
 
 [node name="table" type="Sprite" parent="." index="1"]
@@ -161,9 +161,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 20.0
-margin_top = 10.0
+margin_top = 9.0
 margin_right = 453.0
-margin_bottom = 68.0
+margin_bottom = 67.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -173,7 +173,7 @@ size_flags_vertical = 4
 custom_fonts/font = ExtResource( 11 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "The Man Cave"
+text = "Level 5"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
