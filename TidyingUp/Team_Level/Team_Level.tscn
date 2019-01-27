@@ -1,0 +1,57 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Team_Level/Background-of-kariemondoness.png" type="Texture" id=1]
+[ext_resource path="res://Team_Level/Michael.png" type="Texture" id=2]
+[ext_resource path="res://Team_Level/Tim.png" type="Texture" id=3]
+[ext_resource path="res://Team_Level/ummWes.png" type="Texture" id=4]
+[ext_resource path="res://Team_Level/Naomi.png" type="Texture" id=5]
+[ext_resource path="res://Team_Level/Jevion.png" type="Texture" id=6]
+[ext_resource path="res://Team_Level/Laray.png" type="Texture" id=7]
+
+[node name="Team_Level" type="Sprite" index="0"]
+
+texture = ExtResource( 1 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="Michael" type="Sprite" parent="." index="0"]
+
+position = Vector2( 392.002, 386.001 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Tim" type="Sprite" parent="." index="1"]
+
+position = Vector2( 129.001, 413.001 )
+scale = Vector2( 0.85, 0.85 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="ummWes" type="Sprite" parent="." index="2"]
+
+position = Vector2( 513.002, 399.001 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Naomi" type="Sprite" parent="." index="3"]
+
+position = Vector2( 260.001, 468.001 )
+scale = Vector2( 0.9, 0.9 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Jevion" type="Sprite" parent="." index="4"]
+
+position = Vector2( 684.002, 395.001 )
+texture = ExtResource( 6 )
+
+[node name="Laray" type="Sprite" parent="." index="5"]
+
+position = Vector2( 953.003, 395.001 )
+scale = Vector2( 0.73, 0.73 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+
