@@ -7,7 +7,8 @@ func _input_event(viewport, event, shape_idx):
     and event.button_index == BUTTON_LEFT \
     and event.is_pressed() \
 	and !get_tree().is_input_handled() \
-	and self.visible:
+	and self.visible \
+	and !get_parent().get_node("Stand_Trigger").visible:
 		get_tree().set_input_as_handled()
 		self.on_click()
 
