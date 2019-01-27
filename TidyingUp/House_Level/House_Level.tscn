@@ -6,10 +6,10 @@
 [ext_resource path="res://House_Level/crane.png" type="Texture" id=4]
 [ext_resource path="res://House_Level/WreckingBallTrigger.gd" type="Script" id=5]
 [ext_resource path="res://House_Level/wrecking_ball.png" type="Texture" id=6]
-[ext_resource path="res://House_Level/house.png" type="Texture" id=7]
-[ext_resource path="res://House_Level/house_left_side.png" type="Texture" id=8]
-[ext_resource path="res://House_Level/HouseLeftSideTrigger.gd" type="Script" id=9]
-[ext_resource path="res://House_Level/house_right_side.png" type="Texture" id=10]
+[ext_resource path="res://House_Level/house_left_side.png" type="Texture" id=7]
+[ext_resource path="res://House_Level/HouseSidesTapTrigger.gd" type="Script" id=8]
+[ext_resource path="res://House_Level/house_right_side.png" type="Texture" id=9]
+[ext_resource path="res://House_Level/house.png" type="Texture" id=10]
 [ext_resource path="res://Cactus Regular.otf" type="DynamicFontData" id=11]
 [ext_resource path="res://images/GameOverGirl.png" type="Texture" id=12]
 [ext_resource path="res://GameOverGirl.gd" type="Script" id=13]
@@ -19,42 +19,42 @@
 [ext_resource path="res://SuccessLabel.gd" type="Script" id=17]
 [ext_resource path="res://Next_Trigger.gd" type="Script" id=18]
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 142.5, 175.43 )
 
-[sub_resource type="CircleShape2D" id=4]
+[sub_resource type="CircleShape2D" id=2]
 
 custom_solver_bias = 0.0
 radius = 28.5454
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
 extents = Vector2( 68.2561, 152.079 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
 extents = Vector2( 74.5204, 150.85 )
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=5]
 
 custom_solver_bias = 0.0
 extents = Vector2( 73.6448, 152.869 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
 extents = Vector2( 76.9153, 148.455 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=7]
 
 custom_solver_bias = 0.0
 extents = Vector2( 144.895, 984.69 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=8]
 
 custom_solver_bias = 0.0
 extents = Vector2( 18.0912, 10 )
@@ -119,7 +119,7 @@ texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CraneTrigger" index="1"]
 
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 
 [node name="WreckingBallTrigger" type="RigidBody2D" parent="." index="1"]
 
@@ -156,17 +156,12 @@ _sections_unfolded = [ "Offset", "Transform" ]
 
 position = Vector2( 5.38861, 229.915 )
 scale = Vector2( 1, 0.816148 )
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 
-[node name="house" type="Sprite" parent="." index="2"]
-
-visible = false
-position = Vector2( -252.069, 32.9306 )
-texture = ExtResource( 7 )
-
-[node name="HouseLeftSideTrigger" type="RigidBody2D" parent="." index="3"]
+[node name="HouseLeftSideTrigger" type="RigidBody2D" parent="." index="2"]
 
 editor/display_folded = true
+visible = false
 position = Vector2( 185.384, 331.153 )
 input_pickable = false
 collision_layer = 1
@@ -191,13 +186,13 @@ _sections_unfolded = [ "Applied Forces" ]
 [node name="house_left_side" type="Sprite" parent="HouseLeftSideTrigger" index="0"]
 
 position = Vector2( 84.4284, 8.17856 )
-texture = ExtResource( 8 )
+texture = ExtResource( 7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HouseLeftSideTrigger" index="1"]
 
 position = Vector2( 5.68491, 13.1722 )
 scale = Vector2( 1.1302, 1 )
-shape = SubResource( 1 )
+shape = SubResource( 3 )
 
 [node name="Area2D" type="Area2D" parent="HouseLeftSideTrigger" index="2"]
 
@@ -208,16 +203,17 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 9 )
+script = ExtResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HouseLeftSideTrigger/Area2D" index="0"]
 
 position = Vector2( 3.59244, 13.771 )
-shape = SubResource( 8 )
+shape = SubResource( 4 )
 
-[node name="HouseRightSideTrigger" type="RigidBody2D" parent="." index="4"]
+[node name="HouseRightSideTrigger" type="RigidBody2D" parent="." index="3"]
 
 editor/display_folded = true
+visible = false
 position = Vector2( 355.426, 347.917 )
 input_pickable = false
 collision_layer = 1
@@ -242,13 +238,13 @@ _sections_unfolded = [ "Applied Forces" ]
 [node name="house_right_side" type="Sprite" parent="HouseRightSideTrigger" index="0"]
 
 position = Vector2( -85.4157, -8.38232 )
-texture = ExtResource( 10 )
+texture = ExtResource( 9 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HouseRightSideTrigger" index="1"]
 
 position = Vector2( -5.08611, -4 )
 scale = Vector2( 1.06636, 1 )
-shape = SubResource( 2 )
+shape = SubResource( 5 )
 
 [node name="Area2D" type="Area2D" parent="HouseRightSideTrigger" index="2"]
 
@@ -259,12 +255,17 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 9 )
+script = ExtResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HouseRightSideTrigger/Area2D" index="0"]
 
 position = Vector2( -1.19745, -4.19116 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
+
+[node name="house" type="Sprite" parent="." index="4"]
+
+position = Vector2( 270.552, 338.351 )
+texture = ExtResource( 10 )
 
 [node name="LeftWall" type="RigidBody2D" parent="." index="5"]
 
@@ -293,7 +294,7 @@ angular_damp = -1.0
 
 position = Vector2( -295.807, 0 )
 scale = Vector2( 3.00012, 1 )
-shape = SubResource( 5 )
+shape = SubResource( 7 )
 
 [node name="RightWall" type="RigidBody2D" parent="." index="6"]
 
@@ -322,7 +323,7 @@ angular_damp = -1.0
 
 position = Vector2( -295.807, 0 )
 scale = Vector2( 3.00012, 1 )
-shape = SubResource( 5 )
+shape = SubResource( 7 )
 
 [node name="TopWall" type="RigidBody2D" parent="." index="7"]
 
@@ -351,7 +352,7 @@ angular_damp = -1.0
 
 position = Vector2( 87.59, -194.391 )
 scale = Vector2( 53.4815, -34.35 )
-shape = SubResource( 6 )
+shape = SubResource( 8 )
 
 [node name="BottomWall" type="RigidBody2D" parent="." index="8"]
 
@@ -380,7 +381,7 @@ angular_damp = -1.0
 
 position = Vector2( 87.59, -194.391 )
 scale = Vector2( 53.4815, -34.35 )
-shape = SubResource( 6 )
+shape = SubResource( 8 )
 
 [node name="LevelLabel" type="Label" parent="." index="9"]
 
