@@ -15,6 +15,7 @@ func _input_event(viewport, event, shape_idx):
 func on_click():
 	if get_parent().get_node("PlungerTrigger").picked_up == true:
 		self.get_parent().level_win = true
+		self.get_parent().get_node("PlungerTrigger").hide()
 	else:
 		self.get_node("toilet opened marie").visible = true
 		self.get_node("toilet opened").visible = false

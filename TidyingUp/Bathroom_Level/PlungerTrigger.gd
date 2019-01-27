@@ -11,8 +11,8 @@ func _process(delta):
 		self.position = get_viewport().get_mouse_position()
 
 func _input_event(viewport, event, shape_idx):
-	if self.get_parent().game_over:
-		pass
+	if self.get_parent().game_over || self.get_parent().level_win:
+		return
 	if event is InputEventMouseButton \
     and event.button_index == BUTTON_LEFT \
     and event.is_pressed() \
