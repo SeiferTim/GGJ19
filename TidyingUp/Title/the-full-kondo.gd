@@ -1,0 +1,17 @@
+extends Sprite
+
+# class member variables go here, for example:
+# var a = 2
+# var b = "textvar"
+
+func _ready():
+	# Called when the node is added to the scene for the first time.
+	# Initialization here
+	pass
+
+func _process(delta):
+	if visible:
+		if position.y > 550:
+			position.y-= 500 * delta
+			if position.y < 550:
+				position.y = 550

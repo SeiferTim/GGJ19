@@ -17,6 +17,9 @@ func _process(delta):
 				if word > 2:
 					word = 0
 				get_node(words[word]).visible = true
+				get_parent().get_node("Dog_Sound").position.x = position.x
+				get_parent().get_node("Dog_Sound").position.y = position.y
+				get_parent().get_node("Dog_Sound").play()
 			else:
 				hopTimer = 1
 				

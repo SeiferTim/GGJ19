@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://images/Interior.png" type="Texture" id=1]
 [ext_resource path="res://Basement_Level/Basement_Level.gd" type="Script" id=2]
@@ -10,7 +10,7 @@
 [ext_resource path="res://images/DoorOpen.png" type="Texture" id=8]
 [ext_resource path="res://Basement_Level/Door_Trigger.gd" type="Script" id=9]
 [ext_resource path="res://images/DoorClosed.png" type="Texture" id=10]
-[ext_resource path="res://images/dasd-removebg.png" type="Texture" id=11]
+[ext_resource path="res://images/the-full-kondo.png" type="Texture" id=11]
 [ext_resource path="res://Fonts/Cactus Reguar DFont.tres" type="DynamicFont" id=12]
 [ext_resource path="res://Fonts/Cactus Regular.tres" type="DynamicFontData" id=13]
 [ext_resource path="res://SuccessLabel.gd" type="Script" id=14]
@@ -18,6 +18,7 @@
 [ext_resource path="res://images/GameOverGirl.png" type="Texture" id=16]
 [ext_resource path="res://GameOverGirl.gd" type="Script" id=17]
 [ext_resource path="res://Retry_Trigger.gd" type="Script" id=18]
+[ext_resource path="res://sounds/basement - pick up junk.wav" type="AudioStream" id=19]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -223,11 +224,11 @@ position = Vector2( 190, 200 )
 scale = Vector2( 9.61539, 15 )
 shape = SubResource( 3 )
 
-[node name="dasd-removebg" type="Sprite" parent="." index="9"]
+[node name="the-full-kondo" type="Sprite" parent="." index="9"]
 
 visible = false
-position = Vector2( 205, 201 )
-scale = Vector2( 0.716532, 0.716532 )
+position = Vector2( 200, 210 )
+scale = Vector2( 0.564105, 0.564105 )
 texture = ExtResource( 11 )
 
 [node name="LevelLabel" type="Label" parent="." index="10"]
@@ -432,5 +433,29 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="Junk_Sound" type="AudioStreamPlayer2D" parent="." index="14"]
+
+position = Vector2( 200, 210 )
+scale = Vector2( 0.564105, 0.564105 )
+stream = ExtResource( 19 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="Web_Sound" type="AudioStreamPlayer2D" parent="." index="15"]
+
+stream = null
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
 
 

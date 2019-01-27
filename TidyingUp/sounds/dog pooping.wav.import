@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/dog pooping.wav-52e8bec0b760472a25ee78acb9f5257c.sample"
+
+[deps]
+
+source_file="res://sounds/dog pooping.wav"
+dest_files=[ "res://.import/dog pooping.wav-52e8bec0b760472a25ee78acb9f5257c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/funeral - coffin open.wav-62ef84b8d5dd2de541c65ad0d5ce893b.sample"
+
+[deps]
+
+source_file="res://sounds/funeral - coffin open.wav"
+dest_files=[ "res://.import/funeral - coffin open.wav-62ef84b8d5dd2de541c65ad0d5ce893b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

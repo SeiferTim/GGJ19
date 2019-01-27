@@ -15,3 +15,6 @@ func on_click():
 	self.visible = false
 	self.get_parent().get_node("TrashcanLid2").visible = true
 	self.get_parent().get_node("TrashbagOpen_Trigger").visible = true
+	get_parent().get_node("TrashLid_sound").position.x = position.x
+	get_parent().get_node("TrashLid_sound").position.y = position.y
+	get_parent().get_node("TrashLid_sound").play()
