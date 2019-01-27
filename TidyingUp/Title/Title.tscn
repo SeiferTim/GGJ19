@@ -36,7 +36,7 @@ _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="back" type="Sprite" index="0"]
+[node name="back" type="Sprite"]
 
 texture = ExtResource( 1 )
 centered = false

@@ -20,5 +20,8 @@ func on_click():
 		self.get_parent().get_node("PlungerTrigger").hide()
 	else:
 		self.get_node("toilet opened marie").visible = true
-		self.get_node("toilet opened").visible = false
+		#self.get_node("toilet opened").visible = false
+		get_parent().get_node("Plunge_Sound").position.x = position.x
+		get_parent().get_node("Plunge_Sound").position.y = position.y
+		get_parent().get_node("Plunge_Sound").play()
 		self.get_parent().game_over = true

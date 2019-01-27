@@ -18,3 +18,6 @@ func on_click():
 	self.get_node("mirror opened").visible = true
 	self.get_node("mirror closed").visible = false
 	self.get_parent().get_node("PlungerTrigger").show()
+	get_parent().get_node("MirrorOpen_Sound").position.x = position.x
+	get_parent().get_node("MirrorOpen_Sound").position.y = position.y
+	get_parent().get_node("MirrorOpen_Sound").play()

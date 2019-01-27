@@ -15,3 +15,6 @@ func _input_event(viewport, event, shape_idx):
 func on_click():
 	self.visible = false
 	self.get_parent().get_node("TrashbagClosed_Trigger").visible = true
+	get_parent().get_node("TrashBag_sound").position.x = position.x
+	get_parent().get_node("TrashBag_sound").position.y = position.y
+	get_parent().get_node("TrashBag_sound").play()

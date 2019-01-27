@@ -8,3 +8,6 @@ func _process(delta):
 			delay-=delta
 			if delay <=0:
 				visible = true
+				get_parent().get_node("Dog_Sound").position.x = position.x
+				get_parent().get_node("Dog_Sound").position.y = position.y
+				get_parent().get_node("Dog_Sound").play()

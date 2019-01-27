@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://images/Interior.png" type="Texture" id=1]
 [ext_resource path="res://Bathroom_Level/Scene02.gd" type="Script" id=2]
@@ -10,7 +10,7 @@
 [ext_resource path="res://Bathroom_Level/mirror opened.png" type="Texture" id=8]
 [ext_resource path="res://Bathroom_Level/ToiletTrigger.gd" type="Script" id=9]
 [ext_resource path="res://Bathroom_Level/toilet opened.png" type="Texture" id=10]
-[ext_resource path="res://Bathroom_Level/toilet opened marie.png" type="Texture" id=11]
+[ext_resource path="res://images/half-kondo.png" type="Texture" id=11]
 [ext_resource path="res://Bathroom_Level/PlungerTrigger.gd" type="Script" id=12]
 [ext_resource path="res://Bathroom_Level/plunger.png" type="Texture" id=13]
 [ext_resource path="res://Cactus Regular.otf" type="DynamicFontData" id=14]
@@ -21,6 +21,7 @@
 [ext_resource path="res://Fonts/Cactus Regular.tres" type="DynamicFontData" id=19]
 [ext_resource path="res://SuccessLabel.gd" type="Script" id=20]
 [ext_resource path="res://Next_Trigger.gd" type="Script" id=21]
+[ext_resource path="res://sounds/bathroom- plunged toilet.wav" type="AudioStream" id=22]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -76,7 +77,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 custom_solver_bias = 0.0
 extents = Vector2( 16.1798, 10 )
 
-[node name="Bathroom_Level" type="Sprite"]
+[node name="Bathroom_Level" type="Sprite" index="0"]
 
 texture = ExtResource( 1 )
 centered = false
@@ -145,7 +146,6 @@ shape = SubResource( 2 )
 
 [node name="ToiletTrigger" type="Area2D" parent="." index="2"]
 
-editor/display_folded = true
 position = Vector2( 644.851, 322.718 )
 scale = Vector2( 1.5, 1.5 )
 input_pickable = true
@@ -166,7 +166,8 @@ texture = ExtResource( 10 )
 [node name="toilet opened marie" type="Sprite" parent="ToiletTrigger" index="1"]
 
 visible = false
-position = Vector2( 23.1277, 21.6331 )
+position = Vector2( 3.43265, -8.47865 )
+scale = Vector2( 0.440915, 0.440915 )
 texture = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ToiletTrigger" index="2"]
@@ -429,5 +430,27 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Rect", "Size Flags", "Theme", "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="MirrorOpen_Sound" type="AudioStreamPlayer2D" parent="." index="8"]
+
+stream = null
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="Plunge_Sound" type="AudioStreamPlayer2D" parent="." index="9"]
+
+stream = ExtResource( 22 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
 
 

@@ -1,11 +1,11 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://images/Interior.png" type="Texture" id=1]
 [ext_resource path="res://Funeral_Level/Funeral_Level.gd" type="Script" id=2]
 [ext_resource path="res://Funeral_Level/Coffin_Trigger.gd" type="Script" id=3]
 [ext_resource path="res://Funeral_Level/Coffin.png" type="Texture" id=4]
 [ext_resource path="res://Funeral_Level/OpenCoffin.png" type="Texture" id=5]
-[ext_resource path="res://images/dasd-removebg.png" type="Texture" id=6]
+[ext_resource path="res://images/half-kondo.png" type="Texture" id=6]
 [ext_resource path="res://Funeral_Level/Stand_Trigger.gd" type="Script" id=7]
 [ext_resource path="res://Funeral_Level/ConcessionStand.png" type="Texture" id=8]
 [ext_resource path="res://Funeral_Level/Balloon_Trigger.gd" type="Script" id=9]
@@ -25,6 +25,9 @@
 [ext_resource path="res://images/GameOverGirl.png" type="Texture" id=23]
 [ext_resource path="res://GameOverGirl.gd" type="Script" id=24]
 [ext_resource path="res://Retry_Trigger.gd" type="Script" id=25]
+[ext_resource path="res://sounds/funeral - ballon.wav" type="AudioStream" id=26]
+[ext_resource path="res://sounds/funeral - coffin open.wav" type="AudioStream" id=27]
+[ext_resource path="res://sounds/funeral - jukebox.wav" type="AudioStream" id=28]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -109,11 +112,11 @@ visible = false
 position = Vector2( 530, 370 )
 texture = ExtResource( 5 )
 
-[node name="dasd-removebg" type="Sprite" parent="OpenCoffin" index="0"]
+[node name="half-kondo" type="Sprite" parent="OpenCoffin" index="0"]
 
-position = Vector2( 58.195, -84.5125 )
+position = Vector2( 30.2513, -88.4888 )
 rotation = -0.0813228
-scale = Vector2( 0.526383, 0.526383 )
+scale = Vector2( 0.921218, 0.921218 )
 texture = ExtResource( 6 )
 
 [node name="Stand_Trigger" type="Area2D" parent="." index="2"]
@@ -463,5 +466,38 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="Balloon_Sound" type="AudioStreamPlayer2D" parent="." index="13"]
+
+stream = ExtResource( 26 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="Coffin_Sound" type="AudioStreamPlayer2D" parent="." index="14"]
+
+stream = ExtResource( 27 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="Juke_Sound" type="AudioStreamPlayer2D" parent="." index="15"]
+
+stream = ExtResource( 28 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
 
 

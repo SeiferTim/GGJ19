@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://images/Interior.png" type="Texture" id=1]
 [ext_resource path="res://Trash_Level/Trash_Level.gd" type="Script" id=2]
@@ -21,6 +21,8 @@
 [ext_resource path="res://images/GameOverGirl.png" type="Texture" id=19]
 [ext_resource path="res://GameOverGirl.gd" type="Script" id=20]
 [ext_resource path="res://Retry_Trigger.gd" type="Script" id=21]
+[ext_resource path="res://sounds/trash - trash lid.wav" type="AudioStream" id=22]
+[ext_resource path="res://sounds/trash - baging.wav" type="AudioStream" id=23]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -402,5 +404,29 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="TrashLid_sound" type="AudioStreamPlayer2D" parent="." index="13"]
+
+position = Vector2( 748.535, 265.833 )
+scale = Vector2( -1.375, 1 )
+stream = ExtResource( 22 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="TrashBag_sound" type="AudioStreamPlayer2D" parent="." index="14"]
+
+stream = ExtResource( 23 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
 
 

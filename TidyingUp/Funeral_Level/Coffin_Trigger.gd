@@ -15,4 +15,7 @@ func _input_event(viewport, event, shape_idx):
 func on_click():
 	self.visible = false
 	get_parent().get_node("OpenCoffin").visible = true
+	get_parent().get_node("Coffin_Sound").position.x = position.x
+	get_parent().get_node("Coffin_Sound").position.y = position.y
+	get_parent().get_node("Coffin_Sound").play()
 	get_parent().game_over = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://images/Interior.png" type="Texture" id=1]
 [ext_resource path="res://Dog_Level/Dog_Level.gd" type="Script" id=2]
@@ -24,6 +24,8 @@
 [ext_resource path="res://images/GameOverGirl.png" type="Texture" id=22]
 [ext_resource path="res://GameOverGirl.gd" type="Script" id=23]
 [ext_resource path="res://Retry_Trigger.gd" type="Script" id=24]
+[ext_resource path="res://sounds/dog pooping.wav" type="AudioStream" id=25]
+[ext_resource path="res://sounds/dog barking.wav" type="AudioStream" id=26]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -58,7 +60,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 custom_solver_bias = 0.0
 extents = Vector2( 16.1798, 10 )
 
-[node name="Dog_Level" type="Sprite" index="0"]
+[node name="Dog_Level" type="Sprite"]
 
 texture = ExtResource( 1 )
 centered = false
@@ -441,5 +443,27 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="Poop_Sound" type="AudioStreamPlayer2D" parent="." index="11"]
+
+stream = ExtResource( 25 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="Dog_Sound" type="AudioStreamPlayer2D" parent="." index="12"]
+
+stream = ExtResource( 26 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
 
 

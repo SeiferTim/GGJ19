@@ -17,4 +17,7 @@ func on_click():
 	self.get_parent().get_node("DoorClosed_Trigger").visible = false
 	self.get_parent().get_node("DoorOpen").visible = true
 	self.get_parent().get_node("DeleriousKid").visible = true
+	get_parent().get_node("TrashBag_sound").position.x = position.x
+	get_parent().get_node("TrashBag_sound").position.y = position.y
+	get_parent().get_node("TrashBag_sound").play()
 	self.get_parent().level_win = true

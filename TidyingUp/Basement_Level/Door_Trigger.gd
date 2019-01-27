@@ -15,5 +15,5 @@ func _input_event(viewport, event, shape_idx):
 func on_click():
 	self.visible = false
 	get_parent().get_node("DoorOpen").visible = true
-	get_parent().get_node("dasd-removebg").visible = true
+	get_parent().get_node("the-full-kondo").visible = true
 	get_parent().game_over = true

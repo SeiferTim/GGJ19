@@ -27,6 +27,9 @@ func _process(delta):
 				get_node(words[word]).position.x = get_node("TriggeredDog").position.x + (120 * flipped)
 				get_node(words[word]).position.y = get_node("TriggeredDog").position.y - 60
 				get_node(words[word]).visible = true
+				get_parent().get_node("Dog_Sound").position.x = position.x
+				get_parent().get_node("Dog_Sound").position.y = position.y
+				get_parent().get_node("Dog_Sound").play()
 			else:
 				hopTimer = 1
 				move_and_collide(Vector2(20 * flipped,20))
