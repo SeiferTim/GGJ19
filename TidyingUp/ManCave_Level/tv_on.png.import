@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Table.png-a17a279a10fb76ecf5342f01ede04141.stex"
+path="res://.import/tv_on.png-e3118ec291b8a36e75caf6eb311a60d0.stex"
 
 [deps]
 
-source_file="res://ManCave_Level/Table.png"
-dest_files=[ "res://.import/Table.png-a17a279a10fb76ecf5342f01ede04141.stex" ]
+source_file="res://ManCave_Level/tv_on.png"
+dest_files=[ "res://.import/tv_on.png-e3118ec291b8a36e75caf6eb311a60d0.stex" ]
 
 [params]
 

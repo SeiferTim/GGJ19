@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Table.png-a17a279a10fb76ecf5342f01ede04141.stex"
+path="res://.import/Recliner.png-2edbec4ef570ddc4f73d7442e5a4ade9.stex"
 
 [deps]
 
-source_file="res://ManCave_Level/Table.png"
-dest_files=[ "res://.import/Table.png-a17a279a10fb76ecf5342f01ede04141.stex" ]
+source_file="res://Lonely_Level/Recliner.png"
+dest_files=[ "res://.import/Recliner.png-2edbec4ef570ddc4f73d7442e5a4ade9.stex" ]
 
 [params]
 

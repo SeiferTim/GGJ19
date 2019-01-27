@@ -11,4 +11,4 @@ func _input_event(viewport, event, shape_idx):
 		self.on_click()
 
 func on_click():
-	get_tree().reload_current_scene()
+	get_tree().change_scene("res://Trash_Level/Trash_Level.tscn")
