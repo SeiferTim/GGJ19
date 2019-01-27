@@ -22,37 +22,37 @@
 [ext_resource path="res://GameOverGirl.gd" type="Script" id=20]
 [ext_resource path="res://Retry_Trigger.gd" type="Script" id=21]
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 105.13, 66.7583 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 215.298, 110.466 )
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
 extents = Vector2( 93.3259, 116.677 )
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[sub_resource type="CircleShape2D" id=3]
+[sub_resource type="CircleShape2D" id=5]
 
 custom_solver_bias = 0.0
 radius = 48.0812
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
 extents = Vector2( 53.0396, 170.939 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=7]
 
 size = 112
 use_mipmaps = false
@@ -60,7 +60,7 @@ use_filter = false
 font_data = ExtResource( 16 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=8]
 
 custom_solver_bias = 0.0
 extents = Vector2( 16.1798, 10 )
@@ -91,7 +91,7 @@ texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SignTrigger" index="1"]
 
-shape = SubResource( 7 )
+shape = SubResource( 1 )
 
 [node name="TVTrigger" type="Area2D" parent="." index="1"]
 
@@ -118,7 +118,7 @@ texture = ExtResource( 7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TVTrigger" index="2"]
 
-shape = SubResource( 8 )
+shape = SubResource( 2 )
 
 [node name="table" type="Sprite" parent="." index="2"]
 
@@ -143,7 +143,7 @@ texture = ExtResource( 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BBQPitTrigger" index="1"]
 
-shape = SubResource( 1 )
+shape = SubResource( 3 )
 
 [node name="TVRemoteTrigger" type="Area2D" parent="." index="4"]
 
@@ -166,7 +166,7 @@ texture = ExtResource( 11 )
 
 position = Vector2( 2.58897, -4.8484 )
 scale = Vector2( 4.24986, 5.28871 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="XboxControllerTrigger" type="Area2D" parent="." index="5"]
 
@@ -188,7 +188,7 @@ texture = ExtResource( 12 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="XboxControllerTrigger" index="1"]
 
 position = Vector2( -7.36639, -2.45551 )
-shape = SubResource( 3 )
+shape = SubResource( 5 )
 
 [node name="MomTrigger" type="Area2D" parent="." index="6"]
 
@@ -209,7 +209,7 @@ texture = ExtResource( 14 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MomTrigger" index="1"]
 
-shape = SubResource( 4 )
+shape = SubResource( 6 )
 
 [node name="LevelLabel" type="Label" parent="." index="7"]
 
@@ -236,7 +236,33 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Rect", "Size Flags", "Theme", "custom_colors", "custom_fonts", "custom_styles" ]
 
-[node name="SuccessLabel" type="Label" parent="." index="8"]
+[node name="TidyText" type="Label" parent="." index="8"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 300.0
+margin_top = 540.0
+margin_right = 733.0
+margin_bottom = 598.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 15 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Does it spark procrastination?"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Rect", "Size Flags", "Theme", "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="SuccessLabel" type="Label" parent="." index="9"]
 
 visible = false
 anchor_left = 0.0
@@ -253,7 +279,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Feel the Joy!"
@@ -306,35 +332,9 @@ _sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts", "cus
 
 position = Vector2( 10, -10 )
 scale = Vector2( 5.5625, 2.42308 )
-shape = SubResource( 6 )
+shape = SubResource( 8 )
 
-[node name="TidyText" type="Label" parent="SuccessLabel" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 90.0
-margin_top = 360.0
-margin_right = 523.0
-margin_bottom = 418.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = ExtResource( 15 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "Does it spark filth?"
-align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Rect", "Size Flags", "Theme", "custom_colors", "custom_fonts", "custom_styles" ]
-
-[node name="GameOverGirl" type="Sprite" parent="." index="9"]
+[node name="GameOverGirl" type="Sprite" parent="." index="10"]
 
 visible = false
 texture = ExtResource( 19 )
@@ -384,7 +384,7 @@ _sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts", "cus
 
 position = Vector2( 10, -10 )
 scale = Vector2( 5.5625, 2.42308 )
-shape = SubResource( 6 )
+shape = SubResource( 8 )
 
 [node name="GameOverLabel" type="Label" parent="GameOverGirl" index="1"]
 
@@ -402,7 +402,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Game Over!"
