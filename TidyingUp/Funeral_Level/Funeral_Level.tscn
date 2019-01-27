@@ -26,12 +26,12 @@
 [ext_resource path="res://GameOverGirl.gd" type="Script" id=24]
 [ext_resource path="res://Retry_Trigger.gd" type="Script" id=25]
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 11.102, 10 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 200, 140 )
@@ -51,17 +51,17 @@ radius = 10.0
 custom_solver_bias = 0.0
 radius = 10.0
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[sub_resource type="CircleShape2D" id=9]
+[sub_resource type="CircleShape2D" id=7]
 
 custom_solver_bias = 0.0
 radius = 10.0
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=8]
 
 size = 112
 use_mipmaps = false
@@ -69,7 +69,7 @@ use_filter = false
 font_data = ExtResource( 20 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=9]
 
 custom_solver_bias = 0.0
 extents = Vector2( 16.1798, 10 )
@@ -101,7 +101,7 @@ texture = ExtResource( 4 )
 
 position = Vector2( 530, 380 )
 scale = Vector2( 19.0856, 7.30769 )
-shape = SubResource( 6 )
+shape = SubResource( 1 )
 
 [node name="OpenCoffin" type="Sprite" parent="." index="1"]
 
@@ -137,7 +137,7 @@ texture = ExtResource( 8 )
 
 position = Vector2( 541.5, 276.5 )
 scale = Vector2( 1.18966, 1.51399 )
-shape = SubResource( 7 )
+shape = SubResource( 2 )
 
 [node name="Balloon_Trigger" type="Area2D" parent="." index="3"]
 
@@ -238,7 +238,7 @@ texture = ExtResource( 16 )
 
 position = Vector2( 120, 345 )
 scale = Vector2( 6.92308, 9.61539 )
-shape = SubResource( 8 )
+shape = SubResource( 6 )
 
 [node name="Bear_Trigger" type="Area2D" parent="." index="8"]
 
@@ -261,7 +261,7 @@ texture = ExtResource( 18 )
 
 position = Vector2( 290, 420 )
 scale = Vector2( 11.1538, 11.9231 )
-shape = SubResource( 9 )
+shape = SubResource( 7 )
 
 [node name="LevelLabel" type="Label" parent="." index="9"]
 
@@ -331,7 +331,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 8 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Feel the Joy!"
@@ -384,7 +384,7 @@ _sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts", "cus
 
 position = Vector2( 10, -10 )
 scale = Vector2( 5.5625, 2.42308 )
-shape = SubResource( 2 )
+shape = SubResource( 9 )
 
 [node name="GameOverGirl" type="Sprite" parent="." index="12"]
 
@@ -436,7 +436,7 @@ _sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts", "cus
 
 position = Vector2( 10, -10 )
 scale = Vector2( 5.5625, 2.42308 )
-shape = SubResource( 2 )
+shape = SubResource( 9 )
 
 [node name="GameOverLabel" type="Label" parent="GameOverGirl" index="1"]
 
@@ -454,7 +454,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 8 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Game Over!"
