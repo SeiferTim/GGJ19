@@ -14,4 +14,4 @@ func _process(delta):
 		 && get_node("WesTarget").trashed
 		 && get_node("JevionTarget").trashed
 		 ):
-				level_win = true
+			level_win = true
