@@ -77,7 +77,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 custom_solver_bias = 0.0
 extents = Vector2( 16.1798, 10 )
 
-[node name="Funeral_Level" type="Sprite"]
+[node name="Funeral_Level" type="Sprite" index="0"]
 
 texture = ExtResource( 1 )
 centered = false
@@ -285,7 +285,7 @@ size_flags_vertical = 4
 custom_fonts/font = ExtResource( 19 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "Level 6"
+text = "Level 7"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1

@@ -88,7 +88,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 custom_solver_bias = 0.0
 extents = Vector2( 16.1798, 10 )
 
-[node name="Team_Level" type="Sprite"]
+[node name="Team_Level" type="Sprite" index="0"]
 
 texture = ExtResource( 1 )
 centered = false
@@ -252,9 +252,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 20.0
-margin_top = 9.0
+margin_top = 8.0
 margin_right = 453.0
-margin_bottom = 67.0
+margin_bottom = 66.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -264,7 +264,7 @@ size_flags_vertical = 4
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "Level 9"
+text = "Level 10"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
