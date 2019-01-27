@@ -9,13 +9,7 @@ var level_win = false
 
 var next_scene = "res://Bathroom_Level/Bathroom_Level.tscn"
 
-func _ready():
-	# Called when the node is added to the scene for the first time.
-	# Initialization here
-	
-	pass
-
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+func _process(delta):
+	if !game_over && !level_win:
+		if get_node("Clown").visible and get_node("mom").visible and get_node("TriggeredDog").visible:
+				level_win = true

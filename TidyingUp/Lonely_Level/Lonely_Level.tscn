@@ -1,47 +1,72 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://images/Interior.png" type="Texture" id=1]
 [ext_resource path="res://Lonely_Level/Lonely_Level.gd" type="Script" id=2]
-[ext_resource path="res://Lonely_Level/Recliner.png" type="Texture" id=3]
-[ext_resource path="res://images/DoorClosed.png" type="Texture" id=4]
-[ext_resource path="res://images/DoorOpen.png" type="Texture" id=5]
-[ext_resource path="res://ManCave_Level/mom.png" type="Texture" id=6]
-[ext_resource path="res://Lonely_Level/GirlOnPhone.png" type="Texture" id=7]
-[ext_resource path="res://images/the-full-kondo.png" type="Texture" id=8]
-[ext_resource path="res://Funeral_Level/balloon blue.png" type="Texture" id=9]
-[ext_resource path="res://Funeral_Level/balloon red.png" type="Texture" id=10]
-[ext_resource path="res://Funeral_Level/balloon yellow.png" type="Texture" id=11]
-[ext_resource path="res://Funeral_Level/SadClown.png" type="Texture" id=12]
-[ext_resource path="res://images/TriggeredDog.png" type="Texture" id=13]
+[ext_resource path="res://Lonely_Level/Chair_Trigger.gd" type="Script" id=3]
+[ext_resource path="res://Lonely_Level/Recliner.png" type="Texture" id=4]
+[ext_resource path="res://Lonely_Level/DogTreat.png" type="Texture" id=5]
+[ext_resource path="res://images/DoorOpen.png" type="Texture" id=6]
+[ext_resource path="res://Lonely_Level/Door_Trigger.gd" type="Script" id=7]
+[ext_resource path="res://images/DoorClosed.png" type="Texture" id=8]
+[ext_resource path="res://Lonely_Level/Phone_Trigger.gd" type="Script" id=9]
+[ext_resource path="res://Lonely_Level/Phone.png" type="Texture" id=10]
+[ext_resource path="res://ManCave_Level/mom.png" type="Texture" id=11]
+[ext_resource path="res://Lonely_Level/mom.gd" type="Script" id=12]
+[ext_resource path="res://Lonely_Level/Table_Trigger.gd" type="Script" id=13]
 [ext_resource path="res://ManCave_Level/Table.png" type="Texture" id=14]
-[ext_resource path="res://Lonely_Level/food.png" type="Texture" id=15]
-[ext_resource path="res://Fonts/Cactus Reguar DFont.tres" type="DynamicFont" id=16]
-[ext_resource path="res://Fonts/Cactus Regular.tres" type="DynamicFontData" id=17]
-[ext_resource path="res://SuccessLabel.gd" type="Script" id=18]
-[ext_resource path="res://Next_Trigger.gd" type="Script" id=19]
-[ext_resource path="res://images/GameOverGirl.png" type="Texture" id=20]
-[ext_resource path="res://GameOverGirl.gd" type="Script" id=21]
-[ext_resource path="res://Retry_Trigger.gd" type="Script" id=22]
+[ext_resource path="res://Lonely_Level/GirlOnPhone.png" type="Texture" id=15]
+[ext_resource path="res://images/the-full-kondo.png" type="Texture" id=16]
+[ext_resource path="res://Lonely_Level/the-full-kondo.gd" type="Script" id=17]
+[ext_resource path="res://Funeral_Level/balloon blue.png" type="Texture" id=18]
+[ext_resource path="res://Lonely_Level/Clown.gd" type="Script" id=19]
+[ext_resource path="res://Funeral_Level/balloon red.png" type="Texture" id=20]
+[ext_resource path="res://Funeral_Level/balloon yellow.png" type="Texture" id=21]
+[ext_resource path="res://Funeral_Level/SadClown.png" type="Texture" id=22]
+[ext_resource path="res://images/TriggeredDog.png" type="Texture" id=23]
+[ext_resource path="res://Lonely_Level/TriggeredDog.gd" type="Script" id=24]
+[ext_resource path="res://Lonely_Level/food.png" type="Texture" id=25]
+[ext_resource path="res://Fonts/Cactus Reguar DFont.tres" type="DynamicFont" id=26]
+[ext_resource path="res://Fonts/Cactus Regular.tres" type="DynamicFontData" id=27]
+[ext_resource path="res://SuccessLabel.gd" type="Script" id=28]
+[ext_resource path="res://Next_Trigger.gd" type="Script" id=29]
+[ext_resource path="res://images/GameOverGirl.png" type="Texture" id=30]
+[ext_resource path="res://GameOverGirl.gd" type="Script" id=31]
+[ext_resource path="res://Retry_Trigger.gd" type="Script" id=32]
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 40, 10 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="RectangleShape2D" id=4]
 
-size = 112
-use_mipmaps = false
-use_filter = false
-font_data = ExtResource( 17 )
-_sections_unfolded = [ "Font", "Settings" ]
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
 
 [sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 112
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 27 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
 extents = Vector2( 16.1798, 10 )
 
-[node name="Trash_Level" type="Sprite" index="0"]
+[node name="Lonely_Level" type="Sprite" index="0"]
 
 texture = ExtResource( 1 )
 centered = false
@@ -50,6 +75,7 @@ _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
 [node name="Chair_Trigger" type="Area2D" parent="." index="0"]
 
+editor/display_folded = true
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -57,101 +83,173 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
+script = ExtResource( 3 )
 
 [node name="Recliner" type="Sprite" parent="Chair_Trigger" index="0"]
 
 position = Vector2( 805, 354.913 )
 scale = Vector2( 0.552326, 0.552326 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chair_Trigger" index="1"]
 
 position = Vector2( 805, 350 )
 scale = Vector2( 2.44186, 10 )
-shape = SubResource( 7 )
+shape = SubResource( 1 )
 
-[node name="DoorClosed" type="Sprite" parent="." index="1"]
+[node name="DogTreat" type="Sprite" parent="." index="1"]
 
-position = Vector2( 150, 260 )
-texture = ExtResource( 4 )
+visible = false
+position = Vector2( 820, 370 )
+texture = ExtResource( 5 )
 
 [node name="DoorOpen" type="Sprite" parent="." index="2"]
 
 visible = false
 position = Vector2( 90, 280 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 
-[node name="mom" type="Sprite" parent="." index="3"]
+[node name="Door_Trigger" type="Area2D" parent="." index="3"]
+
+editor/display_folded = true
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 7 )
+
+[node name="DoorClosed" type="Sprite" parent="Door_Trigger" index="0"]
+
+position = Vector2( 150, 260 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door_Trigger" index="1"]
+
+position = Vector2( 150, 260 )
+scale = Vector2( 10.7692, 14.6154 )
+shape = SubResource( 4 )
+
+[node name="Phone_Trigger" type="Area2D" parent="." index="4"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 9 )
+
+[node name="Phone" type="Sprite" parent="Phone_Trigger" index="0"]
+
+position = Vector2( 679.758, 435.768 )
+rotation = -0.552005
+scale = Vector2( 0.687501, 0.649744 )
+texture = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Phone_Trigger" index="1"]
+
+position = Vector2( 680.209, 435.162 )
+rotation = -0.544122
+scale = Vector2( 1.65385, 2.04808 )
+shape = SubResource( 6 )
+
+[node name="mom" type="Sprite" parent="." index="5"]
 
 visible = false
 position = Vector2( 400, 290 )
-texture = ExtResource( 6 )
+texture = ExtResource( 11 )
+script = ExtResource( 12 )
 
-[node name="GirlOnPhone" type="Sprite" parent="." index="4"]
+[node name="Table_Trigger" type="Area2D" parent="." index="6"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 13 )
+
+[node name="Table" type="Sprite" parent="Table_Trigger" index="0"]
+
+position = Vector2( 520, 410 )
+scale = Vector2( 0.752381, 0.752381 )
+texture = ExtResource( 14 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Table_Trigger" index="1"]
+
+position = Vector2( 520, 400 )
+scale = Vector2( 12.3077, 10 )
+shape = SubResource( 5 )
+
+[node name="GirlOnPhone" type="Sprite" parent="." index="7"]
 
 visible = false
 position = Vector2( 800, 310 )
 scale = Vector2( 0.580052, 0.580052 )
-texture = ExtResource( 7 )
+texture = ExtResource( 15 )
 
-[node name="the-full-kondo" type="Sprite" parent="." index="5"]
+[node name="the-full-kondo" type="Sprite" parent="." index="8"]
 
 visible = false
 position = Vector2( 960, 540 )
-texture = ExtResource( 8 )
+texture = ExtResource( 16 )
+script = ExtResource( 17 )
 
-[node name="Clown" type="Sprite" parent="." index="6"]
+[node name="Clown" type="Sprite" parent="." index="9"]
 
+editor/display_folded = true
 visible = false
 position = Vector2( 96.4341, 162.488 )
 rotation = -0.24037
 scale = Vector2( 0.460138, 0.460138 )
-texture = ExtResource( 9 )
+texture = ExtResource( 18 )
+script = ExtResource( 19 )
 
 [node name="balloon red" type="Sprite" parent="Clown" index="0"]
 
 position = Vector2( 93.5442, -8.14609 )
 rotation = 0.447575
 scale = Vector2( 1.17655, 1.17655 )
-texture = ExtResource( 10 )
+texture = ExtResource( 20 )
 
 [node name="balloon yellow" type="Sprite" parent="Clown" index="1"]
 
 position = Vector2( 35.0955, -19.341 )
 rotation = 0.1131
 scale = Vector2( 1.12612, 1.12612 )
-texture = ExtResource( 11 )
+texture = ExtResource( 21 )
 
 [node name="SadClown" type="Sprite" parent="Clown" index="2"]
 
 position = Vector2( 131.526, 317.558 )
 rotation = 0.24037
 scale = Vector2( 1.21105, 1.21105 )
-texture = ExtResource( 12 )
+texture = ExtResource( 22 )
 
-[node name="TriggeredDog" type="Sprite" parent="." index="7"]
+[node name="TriggeredDog" type="Sprite" parent="." index="10"]
 
 visible = false
 position = Vector2( 903.762, 409.979 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
-texture = ExtResource( 13 )
+texture = ExtResource( 23 )
+script = ExtResource( 24 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Table" type="Sprite" parent="." index="8"]
-
-position = Vector2( 520, 410 )
-scale = Vector2( 0.752381, 0.752381 )
-texture = ExtResource( 14 )
-
-[node name="food" type="Sprite" parent="." index="9"]
+[node name="food" type="Sprite" parent="." index="11"]
 
 visible = false
 position = Vector2( 520, 320 )
 scale = Vector2( 0.463415, 0.463415 )
-texture = ExtResource( 15 )
+texture = ExtResource( 25 )
 
-[node name="LevelLabel" type="Label" parent="." index="10"]
+[node name="LevelLabel" type="Label" parent="." index="12"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -167,7 +265,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 16 )
+custom_fonts/font = ExtResource( 26 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Level 7"
@@ -176,7 +274,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Rect", "Size Flags", "Theme", "custom_colors", "custom_fonts", "custom_styles" ]
 
-[node name="TidyText" type="Label" parent="." index="11"]
+[node name="TidyText" type="Label" parent="." index="13"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -192,7 +290,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 16 )
+custom_fonts/font = ExtResource( 26 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Does it spark isolation?"
@@ -202,7 +300,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Rect", "Size Flags", "Theme", "custom_colors", "custom_fonts", "custom_styles" ]
 
-[node name="SuccessLabel" type="Label" parent="." index="12"]
+[node name="SuccessLabel" type="Label" parent="." index="14"]
 
 editor/display_folded = true
 visible = false
@@ -220,7 +318,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Feel the Joy!"
@@ -228,7 +326,7 @@ align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-script = ExtResource( 18 )
+script = ExtResource( 28 )
 _sections_unfolded = [ "custom_colors", "custom_fonts" ]
 
 [node name="Next_Trigger" type="Area2D" parent="SuccessLabel" index="0"]
@@ -241,7 +339,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 19 )
+script = ExtResource( 29 )
 
 [node name="Next Label" type="Label" parent="SuccessLabel/Next_Trigger" index="0"]
 
@@ -259,7 +357,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 16 )
+custom_fonts/font = ExtResource( 26 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Continue!"
@@ -273,15 +371,15 @@ _sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts", "cus
 
 position = Vector2( 10, -10 )
 scale = Vector2( 5.5625, 2.42308 )
-shape = SubResource( 6 )
+shape = SubResource( 3 )
 
-[node name="GameOverGirl" type="Sprite" parent="." index="13"]
+[node name="GameOverGirl" type="Sprite" parent="." index="15"]
 
 editor/display_folded = true
 visible = false
-texture = ExtResource( 20 )
+texture = ExtResource( 30 )
 centered = false
-script = ExtResource( 21 )
+script = ExtResource( 31 )
 _sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="Retry_Trigger" type="Area2D" parent="GameOverGirl" index="0"]
@@ -294,7 +392,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 22 )
+script = ExtResource( 32 )
 
 [node name="Retry Label" type="Label" parent="GameOverGirl/Retry_Trigger" index="0"]
 
@@ -312,7 +410,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 16 )
+custom_fonts/font = ExtResource( 26 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Retry?"
@@ -326,7 +424,7 @@ _sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts", "cus
 
 position = Vector2( 10, -10 )
 scale = Vector2( 5.5625, 2.42308 )
-shape = SubResource( 6 )
+shape = SubResource( 3 )
 
 [node name="GameOverLabel" type="Label" parent="GameOverGirl" index="1"]
 
@@ -344,7 +442,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Game Over!"
