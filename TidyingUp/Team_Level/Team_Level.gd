@@ -3,7 +3,7 @@ extends Sprite
 var game_over = false
 var level_win = false
 
-var next_scene = "res://Trash_Level/Trash_Level.tscn"
+var next_scene = "res://EndGame/EndGame.tscn"
 
 func _process(delta):
 	if !game_over && !level_win:
