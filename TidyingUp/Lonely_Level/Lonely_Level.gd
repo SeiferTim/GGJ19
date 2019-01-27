@@ -7,7 +7,7 @@ extends Sprite
 var game_over = false
 var level_win = false
 
-var next_scene = "res://Bathroom_Level/Bathroom_Level.tscn"
+var next_scene = "res://House_Level/House_Level.tscn"
 
 func _process(delta):
 	if !game_over && !level_win:

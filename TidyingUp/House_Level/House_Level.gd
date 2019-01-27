@@ -3,10 +3,7 @@ extends Sprite
 var game_over = false
 var level_win = false
 
-func _ready():
-	# Called when the node is added to the scene for the first time.
-	# Initialization here
-	pass
+var next_scene = "res://Team_Level/Team_Level.tscn"
 
 func _process(delta):
 	if !game_over && !level_win:
